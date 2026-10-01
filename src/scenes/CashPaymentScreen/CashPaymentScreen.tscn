@@ -1,0 +1,266 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://src/scenes/CashPaymentScreen/CashPaymentScreen.cs" id="1_script"]
+[ext_resource type="Script" path="res://src/ui/ThemeVisualSlot/ThemeVisualSlot.cs" id="2_visual"]
+[ext_resource type="PackedScene" path="res://src/ui/KioskFooter/KioskFooter.tscn" id="3_footer"]
+
+[node name="CashPaymentScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="SafeMargin" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Content" type="Control" parent="SafeMargin"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="Control" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 92.0
+
+[node name="BackButton" type="Button" parent="SafeMargin/Content/TopBar"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 76.0
+offset_bottom = 68.0
+theme_type_variation = &"BackButton"
+
+[node name="HomeNavigationButton" type="Button" parent="SafeMargin/Content/TopBar"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 16.0
+offset_right = 140.0
+offset_bottom = 68.0
+tooltip_text = "ГЛАВНАЯ"
+theme_type_variation = &"KeypadButton"
+
+[node name="House" type="Polygon2D" parent="SafeMargin/Content/TopBar/HomeNavigationButton"]
+polygon = PackedVector2Array(8, 27, 26, 27, 17, 13)
+color = Color(0.005, 0.105, 0.486, 1)
+
+[node name="HouseBody" type="Polygon2D" parent="SafeMargin/Content/TopBar/HomeNavigationButton"]
+polygon = PackedVector2Array(11, 26, 23, 26, 23, 40, 18, 40, 18, 32, 16, 32, 16, 40, 11, 40)
+color = Color(0.005, 0.105, 0.486, 1)
+
+[node name="BackText" type="Label" parent="SafeMargin/Content/TopBar"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 66.0
+offset_right = 84.0
+offset_bottom = 92.0
+mouse_filter = 2
+theme_type_variation = &"SupportText"
+theme_override_font_sizes/font_size = 13
+text = "НАЗАД"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="SafeMargin/Content/TopBar"]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 20.0
+offset_right = 696.0
+offset_bottom = 80.0
+theme_type_variation = &"ScreenTitle"
+text = "ОПЛАТА НАЛИЧНЫМИ"
+horizontal_alignment = 1
+
+[node name="CurrentBalancePanel" type="PanelContainer" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 264.0
+offset_right = 360.0
+offset_bottom = 374.0
+theme_type_variation = &"WhitePanel"
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Content/CurrentBalancePanel"]
+layout_mode = 2
+
+[node name="Caption" type="Label" parent="SafeMargin/Content/CurrentBalancePanel/Content"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_type_variation = &"PanelTitle"
+text = "ТЕКУЩИЙ БАЛАНС"
+vertical_alignment = 1
+
+[node name="Summary" type="PanelContainer" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 108.0
+offset_right = 686.0
+offset_bottom = 244.0
+theme_type_variation = &"WhitePanel"
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Content/Summary"]
+layout_mode = 2
+
+[node name="Values" type="Control" parent="SafeMargin/Content/Summary/Margin"]
+layout_mode = 2
+
+[node name="Caption" type="Label" parent="SafeMargin/Content/Summary/Margin/Values"]
+layout_mode = 0
+offset_right = 652.0
+offset_bottom = 44.0
+theme_type_variation = &"PanelTitle"
+text = "К ВЫДАЧЕ"
+vertical_alignment = 1
+
+[node name="Balance" type="Label" parent="SafeMargin/Content/Summary/Margin/Values"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 206.0
+offset_right = 310.0
+offset_bottom = 254.0
+theme_type_variation = &"PanelText"
+theme_override_font_sizes/font_size = 28
+text = "0 РУБЛЕЙ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tokens" type="Label" parent="SafeMargin/Content/Summary/Margin/Values"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 52.0
+offset_right = 310.0
+offset_bottom = 116.0
+theme_type_variation = &"PanelText"
+theme_override_font_sizes/font_size = 26
+text = "0 ЖЕТОНОВ"
+vertical_alignment = 1
+
+[node name="Bonus" type="Label" parent="SafeMargin/Content/Summary/Margin/Values"]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 52.0
+offset_right = 632.0
+offset_bottom = 116.0
+theme_type_variation = &"PanelText"
+theme_override_font_sizes/font_size = 24
+text = "БЕЗ БОНУСА"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InstructionPanel" type="PanelContainer" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 394.0
+offset_right = 686.0
+offset_bottom = 880.0
+theme_type_variation = &"WhitePanel"
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Content/InstructionPanel"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Header" type="Label" parent="SafeMargin/Content/InstructionPanel/Content"]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_type_variation = &"PanelTitle"
+text = "КАК ВНЕСТИ"
+vertical_alignment = 1
+
+[node name="Body" type="Control" parent="SafeMargin/Content/InstructionPanel/Content"]
+custom_minimum_size = Vector2(0, 380)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("2_visual")
+SlotId = "cash.instructions"
+
+[node name="BillText" type="Label" parent="SafeMargin/Content/InstructionPanel/Content/Body"]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 58.0
+offset_right = 566.0
+offset_bottom = 154.0
+mouse_filter = 2
+theme_type_variation = &"PanelText"
+text = "ВСТАВЬТЕ КУПЮРЫ\nВ КУПЮРОПРИЁМНИК"
+vertical_alignment = 1
+
+[node name="CoinText" type="Label" parent="SafeMargin/Content/InstructionPanel/Content/Body"]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 224.0
+offset_right = 566.0
+offset_bottom = 326.0
+mouse_filter = 2
+theme_type_variation = &"PanelText"
+text = "ИЛИ МОНЕТЫ\nВ МОНЕТОПРИЁМНИК"
+vertical_alignment = 1
+
+[node name="DispenseButton" type="Button" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 900.0
+offset_right = 686.0
+offset_bottom = 980.0
+theme_type_variation = &"PrimaryButton"
+text = "ВЫДАТЬ"
+
+[node name="Tip" type="Control" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 994.0
+offset_right = 676.0
+offset_bottom = 1100.0
+mouse_filter = 2
+script = ExtResource("2_visual")
+SlotId = "cash.tip"
+
+[node name="TipText" type="Label" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 1010.0
+offset_right = 570.0
+offset_bottom = 1084.0
+mouse_filter = 2
+theme_type_variation = &"PanelText"
+theme_override_font_sizes/font_size = 14
+text = "АВТОМАТ НЕ ВЫДАЁТ СДАЧУ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BannerText" type="Label" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 1022.0
+offset_right = 660.0
+offset_bottom = 1092.0
+mouse_filter = 2
+theme_type_variation = &"PanelText"
+theme_override_font_sizes/font_size = 18
+text = "АВТОМАТ НЕ ВЫДАЁТ СДАЧУ"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="DebugPanel" type="HBoxContainer" parent="SafeMargin/Content"]
+visible = false
+
+[node name="Add10Button" type="Button" parent="SafeMargin/Content/DebugPanel"]
+text = "+10 ₽"
+
+[node name="Add50Button" type="Button" parent="SafeMargin/Content/DebugPanel"]
+text = "+50 ₽"
+
+[node name="Add100Button" type="Button" parent="SafeMargin/Content/DebugPanel"]
+text = "+100 ₽"
+
+[node name="Footer" parent="SafeMargin/Content" instance=ExtResource("3_footer")]
+layout_mode = 1

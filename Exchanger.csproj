@@ -1,0 +1,25 @@
+<Project Sdk="Godot.NET.Sdk/4.7.1">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="tests\**\*.cs" />
+    <!--
+      Windows export creates a sanitized project copy under artifacts. The SDK's
+      default recursive Compile glob does not honor .gitignore, so an interrupted
+      export must never make that copy part of the main C# compilation.
+    -->
+    <Compile Remove="artifacts\export-staging\**\*.cs" />
+    <Compile Include="tests\runtime\PaymentRewardFormattingSmokeBridge.cs"
+             Condition=" '$(Configuration)' == 'Debug' " />
+    <Compile Include="tests\runtime\NativeVideoLifecycleSmoke.cs"
+             Condition=" '$(Configuration)' == 'Debug' " />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.IO.Ports" Version="8.0.0" />
+    <PackageReference Include="Tomlyn" Version="2.10.1" />
+  </ItemGroup>
+</Project>

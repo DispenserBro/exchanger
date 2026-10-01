@@ -1,0 +1,65 @@
+# Техническая конфигурация Exchanger.
+#
+# Этот файл предназначен для монтажника или технического специалиста.
+# Он не отображается и не редактируется в интерфейсе приложения.
+# После изменения полностью перезапустите приложение.
+#
+# При первом запуске копия файла создаётся по адресу:
+# user://config/technical_settings.toml
+
+version = 1
+
+[theme]
+# Каталог с PCK-темами: user:// либо абсолютный путь текущей ОС.
+# Windows с обратными слешами: directory = 'D:\Exchanger\themes'
+# В одинарной TOML-строке обратные слеши не нужно удваивать.
+directory = "user://theme_dlc"
+# Имя выбранного файла строго без расширения .pck.
+file_name = "active_theme"
+enabled = true
+
+[controller]
+# true — безопасный программный имитатор; false — реальный основной контроллер.
+use_mock = true
+# Полное имя фиксирует устройство (например, COM3 или /dev/ttyUSB0).
+# COM перебирает доступные COM-порты по номеру от 0, а ttyUSB или /dev/ttyUSB —
+# доступные /dev/ttyUSB* по номеру от 0 до успешной авторизации.
+port = "COM3"
+baud_rate = 115200
+# Пауза между попытками открыть порт после отсутствия платы или обрыва связи.
+reconnect_interval_seconds = 30
+handshake_timeout_ms = 2000
+frame_timeout_ms = 100
+max_frame_length = 1024
+# Контроллер Вендиста должен получать keep-alive реже одного раза в 180 секунд.
+cashless_keep_alive_seconds = 120
+
+[hopper_1]
+enabled = true
+# Датчик малого остатка первого хоппера: IN1, active-low.
+stock_sensor_input = 1
+stock_low_active_high = false
+# Физический датчик выдачи первого хоппера: IN24, active-low.
+# Основной учёт обычной выдачи ведётся по ответам HOPPER1 OK.
+dispense_sensor_input = 24
+dispense_pulse_active_high = false
+
+[hopper_2]
+enabled = true
+# Датчик малого остатка второго хоппера: IN4, active-low.
+stock_sensor_input = 4
+stock_low_active_high = false
+# Физический датчик выдачи второго хоппера: IN25, active-low.
+# Основной учёт обычной выдачи ведётся по ответам HOPPER2 OK.
+dispense_sensor_input = 25
+dispense_pulse_active_high = false
+
+[service]
+# Сервисная кнопка: IN8, active-low.
+button_input = 8
+button_active_high = false
+
+[polling]
+# Частота резервного чтения цифровых входов.
+input_poll_ms = 100
+stock_poll_seconds = 5

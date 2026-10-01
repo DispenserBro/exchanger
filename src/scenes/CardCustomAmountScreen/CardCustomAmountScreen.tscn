@@ -1,0 +1,218 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/scenes/CardCustomAmountScreen/CardCustomAmountScreen.cs" id="1_script"]
+[ext_resource type="PackedScene" path="res://src/ui/KioskFooter/KioskFooter.tscn" id="2_footer"]
+
+[node name="CardCustomAmountScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="SafeMargin" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Content" type="Control" parent="SafeMargin"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="Control" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 92.0
+
+[node name="BackButton" type="Button" parent="SafeMargin/Content/TopBar"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 76.0
+offset_bottom = 68.0
+theme_type_variation = &"BackButton"
+
+[node name="HomeNavigationButton" type="Button" parent="SafeMargin/Content/TopBar"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 16.0
+offset_right = 140.0
+offset_bottom = 68.0
+tooltip_text = "ГЛАВНАЯ"
+theme_type_variation = &"KeypadButton"
+
+[node name="House" type="Polygon2D" parent="SafeMargin/Content/TopBar/HomeNavigationButton"]
+polygon = PackedVector2Array(8, 27, 26, 27, 17, 13)
+color = Color(0.005, 0.105, 0.486, 1)
+
+[node name="HouseBody" type="Polygon2D" parent="SafeMargin/Content/TopBar/HomeNavigationButton"]
+polygon = PackedVector2Array(11, 26, 23, 26, 23, 40, 18, 40, 18, 32, 16, 32, 16, 40, 11, 40)
+color = Color(0.005, 0.105, 0.486, 1)
+
+[node name="BackText" type="Label" parent="SafeMargin/Content/TopBar"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 66.0
+offset_right = 84.0
+offset_bottom = 92.0
+mouse_filter = 2
+theme_type_variation = &"SupportText"
+theme_override_font_sizes/font_size = 13
+text = "НАЗАД"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="SafeMargin/Content/TopBar"]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 20.0
+offset_right = 696.0
+offset_bottom = 80.0
+theme_type_variation = &"ScreenTitle"
+text = "ДРУГАЯ СУММА"
+horizontal_alignment = 1
+
+[node name="AmountPanel" type="PanelContainer" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 112.0
+offset_right = 650.0
+offset_bottom = 288.0
+theme_type_variation = &"WhitePanel"
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Content/AmountPanel"]
+layout_mode = 2
+
+[node name="Values" type="Control" parent="SafeMargin/Content/AmountPanel/Margin"]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="SafeMargin/Content/AmountPanel/Margin/Values"]
+layout_mode = 0
+offset_right = 580.0
+offset_bottom = 44.0
+theme_type_variation = &"PanelTitle"
+text = "К ВЫДАЧЕ"
+vertical_alignment = 1
+
+[node name="Amount" type="Label" parent="SafeMargin/Content/AmountPanel/Margin/Values"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 270.0
+offset_bottom = 132.0
+theme_type_variation = &"PanelText"
+theme_override_font_sizes/font_size = 26
+text = "0 ЖЕТОНОВ"
+vertical_alignment = 1
+
+[node name="Tokens" type="Label" parent="SafeMargin/Content/AmountPanel/Margin/Values"]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 60.0
+offset_right = 560.0
+offset_bottom = 132.0
+theme_type_variation = &"PanelText"
+theme_override_font_sizes/font_size = 24
+text = "БЕЗ БОНУСА"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KeypadPanel" type="PanelContainer" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 320.0
+offset_right = 616.0
+offset_bottom = 872.0
+theme_type_variation = &"WhitePanel"
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Content/KeypadPanel"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Header" type="Label" parent="SafeMargin/Content/KeypadPanel/Content"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_type_variation = &"PanelTitle"
+text = "ВВЕДИТЕ СУММУ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InputValue" type="Label" parent="SafeMargin/Content/KeypadPanel/Content"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_type_variation = &"PanelText"
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Keypad" type="GridContainer" parent="SafeMargin/Content/KeypadPanel/Content"]
+layout_mode = 2
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+columns = 3
+
+[node name="Digit1" type="Button" parent="SafeMargin/Content/KeypadPanel/Content/Keypad"]
+theme_type_variation = &"CompactButton"
+text = "1"
+[node name="Digit2" type="Button" parent="SafeMargin/Content/KeypadPanel/Content/Keypad"]
+theme_type_variation = &"CompactButton"
+text = "2"
+[node name="Digit3" type="Button" parent="SafeMargin/Content/KeypadPanel/Content/Keypad"]
+theme_type_variation = &"CompactButton"
+text = "3"
+[node name="Digit4" type="Button" parent="SafeMargin/Content/KeypadPanel/Content/Keypad"]
+theme_type_variation = &"CompactButton"
+text = "4"
+[node name="Digit5" type="Button" parent="SafeMargin/Content/KeypadPanel/Content/Keypad"]
+theme_type_variation = &"CompactButton"
+text = "5"
+[node name="Digit6" type="Button" parent="SafeMargin/Content/KeypadPanel/Content/Keypad"]
+theme_type_variation = &"CompactButton"
+text = "6"
+[node name="Digit7" type="Button" parent="SafeMargin/Content/KeypadPanel/Content/Keypad"]
+theme_type_variation = &"CompactButton"
+text = "7"
+[node name="Digit8" type="Button" parent="SafeMargin/Content/KeypadPanel/Content/Keypad"]
+theme_type_variation = &"CompactButton"
+text = "8"
+[node name="Digit9" type="Button" parent="SafeMargin/Content/KeypadPanel/Content/Keypad"]
+theme_type_variation = &"CompactButton"
+text = "9"
+
+[node name="ClearButton" type="Button" parent="SafeMargin/Content/KeypadPanel/Content/Keypad"]
+theme_type_variation = &"CompactButton"
+theme_override_font_sizes/font_size = 17
+text = "СТЕРЕТЬ"
+
+[node name="Digit0" type="Button" parent="SafeMargin/Content/KeypadPanel/Content/Keypad"]
+theme_type_variation = &"CompactButton"
+text = "0"
+
+[node name="BackspaceButton" type="Button" parent="SafeMargin/Content/KeypadPanel/Content/Keypad"]
+visible = false
+theme_type_variation = &"CompactButton"
+text = "⌫"
+
+[node name="ConfirmButton" type="Button" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 902.0
+offset_right = 650.0
+offset_bottom = 996.0
+theme_type_variation = &"PrimaryButton"
+text = "ПОДТВЕРДИТЬ"
+
+[node name="Hint" type="Label" parent="SafeMargin/Content"]
+visible = false
+
+[node name="Footer" parent="SafeMargin/Content" instance=ExtResource("2_footer")]
+layout_mode = 1

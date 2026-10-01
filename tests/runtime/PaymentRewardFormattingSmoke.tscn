@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://tests/runtime/payment_reward_formatting_smoke.gd" id="1"]
+[ext_resource type="Script" path="res://tests/runtime/PaymentRewardFormattingSmokeBridge.cs" id="2_bridge"]
+
+[node name="PaymentRewardFormattingSmoke" type="Node"]
+script = ExtResource("1")
+
+[node name="Bridge" type="Node" parent="."]
+script = ExtResource("2_bridge")

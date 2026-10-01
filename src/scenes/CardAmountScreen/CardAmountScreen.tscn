@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://bh2s4m83ohql"]
+
+[ext_resource type="Script" uid="uid://3scqbxai7atn" path="res://src/scenes/CardAmountScreen/CardAmountScreen.cs" id="1_script"]
+[ext_resource type="PackedScene" path="res://src/ui/KioskFooter/KioskFooter.tscn" id="2_footer"]
+
+[node name="CardAmountScreen" type="Control" unique_id=582313442]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="SafeMargin" type="Control" parent="." unique_id=1306703585]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Content" type="Control" parent="SafeMargin" unique_id=1872109269]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="Control" parent="SafeMargin/Content" unique_id=1447389602]
+anchors_preset = 0
+offset_right = 720.0
+offset_bottom = 92.0
+
+[node name="BackButton" type="Button" parent="SafeMargin/Content/TopBar" unique_id=1430296552]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 76.0
+offset_bottom = 68.0
+theme_type_variation = &"BackButton"
+
+[node name="HomeNavigationButton" type="Button" parent="SafeMargin/Content/TopBar"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 16.0
+offset_right = 140.0
+offset_bottom = 68.0
+tooltip_text = "ГЛАВНАЯ"
+theme_type_variation = &"KeypadButton"
+
+[node name="House" type="Polygon2D" parent="SafeMargin/Content/TopBar/HomeNavigationButton"]
+polygon = PackedVector2Array(8, 27, 26, 27, 17, 13)
+color = Color(0.005, 0.105, 0.486, 1)
+
+[node name="HouseBody" type="Polygon2D" parent="SafeMargin/Content/TopBar/HomeNavigationButton"]
+polygon = PackedVector2Array(11, 26, 23, 26, 23, 40, 18, 40, 18, 32, 16, 32, 16, 40, 11, 40)
+color = Color(0.005, 0.105, 0.486, 1)
+
+[node name="BackText" type="Label" parent="SafeMargin/Content/TopBar" unique_id=1156184636]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 66.0
+offset_right = 84.0
+offset_bottom = 92.0
+theme_type_variation = &"SupportText"
+theme_override_font_sizes/font_size = 13
+text = "НАЗАД"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="SafeMargin/Content/TopBar" unique_id=629423245]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 20.0
+offset_right = 696.0
+offset_bottom = 80.0
+theme_type_variation = &"ScreenTitle"
+text = "ОПЛАТА КАРТОЙ"
+horizontal_alignment = 1
+
+[node name="RewardPanel" type="PanelContainer" parent="SafeMargin/Content" unique_id=227850701]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 110.0
+offset_right = 686.0
+offset_bottom = 250.0
+theme_type_variation = &"WhitePanel"
+
+[node name="Content" type="Control" parent="SafeMargin/Content/RewardPanel" unique_id=2000201105]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="SafeMargin/Content/RewardPanel/Content" unique_id=748546958]
+layout_mode = 0
+offset_right = 652.0
+offset_bottom = 44.0
+theme_type_variation = &"PanelTitle"
+text = "К ВЫДАЧЕ"
+vertical_alignment = 1
+
+[node name="Value" type="Label" parent="SafeMargin/Content/RewardPanel/Content" unique_id=929087976]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 48.0
+offset_right = 310.0
+offset_bottom = 132.0
+theme_type_variation = &"PanelText"
+theme_override_font_sizes/font_size = 26
+text = "ВЫБЕРИТЕ СУММУ"
+vertical_alignment = 1
+
+[node name="Bonus" type="Label" parent="SafeMargin/Content/RewardPanel/Content"]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 48.0
+offset_right = 632.0
+offset_bottom = 132.0
+theme_type_variation = &"PanelText"
+theme_override_font_sizes/font_size = 24
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmountPanel" type="PanelContainer" parent="SafeMargin/Content" unique_id=1760988841]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 274.0
+offset_right = 686.0
+offset_bottom = 828.0
+theme_type_variation = &"WhitePanel"
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Content/AmountPanel" unique_id=1477073218]
+layout_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Content/AmountPanel/Margin" unique_id=330126794]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Header" type="Label" parent="SafeMargin/Content/AmountPanel/Margin/Content" unique_id=1488090230]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_type_variation = &"PanelTitle"
+text = "ОПЛАТА"
+vertical_alignment = 1
+
+[node name="PresetGrid" type="GridContainer" parent="SafeMargin/Content/AmountPanel/Margin/Content" unique_id=976954956]
+custom_minimum_size = Vector2(0, 350)
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 14
+columns = 2
+
+[node name="OtherAmountButton" type="Button" parent="SafeMargin/Content/AmountPanel/Margin/Content" unique_id=979901990]
+custom_minimum_size = Vector2(340, 68)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"CompactButton"
+text = "ДРУГАЯ СУММА"
+
+[node name="ConfirmButton" type="Button" parent="SafeMargin/Content" unique_id=67156065]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 858.0
+offset_right = 686.0
+offset_bottom = 952.0
+theme_type_variation = &"PrimaryButton"
+disabled = true
+text = "ПОДТВЕРДИТЬ"
+
+[node name="SelectionLabel" type="Label" parent="SafeMargin/Content" unique_id=117794897]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 974.0
+offset_right = 660.0
+offset_bottom = 1038.0
+theme_type_variation = &"SupportText"
+theme_override_font_sizes/font_size = 18
+text = "ВЫБЕРИТЕ СУММУ ДЛЯ ПЕРЕХОДА К ТЕРМИНАЛУ"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Footer" parent="SafeMargin/Content" unique_id=1157521037 instance=ExtResource("2_footer")]
+layout_mode = 1

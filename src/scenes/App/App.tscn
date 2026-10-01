@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://61elxchmh0e6"]
+
+[ext_resource type="Script" uid="uid://dj3e07cirb8b8" path="res://src/scenes/App/App.cs" id="1_app"]
+[ext_resource type="PackedScene" path="res://src/ui/StaticBackground/StaticBackground.tscn" id="2_background"]
+[ext_resource type="Script" uid="uid://b3ffmrp6u1rqu" path="res://src/ui/TouchInputGuard/TouchInputGuard.cs" id="4_touch"]
+[ext_resource type="Script" uid="uid://dwvtpapqjcjth" path="res://src/core/Session/SessionController.cs" id="5_session"]
+[ext_resource type="PackedScene" path="res://src/ui/InteractivePet/InteractivePetHost.tscn" id="6_pet"]
+[ext_resource type="Script" uid="uid://3qt66oawbcqn" path="res://src/core/Audio/ApplicationAudio.cs" id="7_audio"]
+
+[node name="App" type="Node" unique_id=1460949439]
+script = ExtResource("1_app")
+
+[node name="TouchInputGuard" type="Node" parent="." unique_id=1951725665]
+process_mode = 3
+script = ExtResource("4_touch")
+
+[node name="SessionController" type="Node" parent="." unique_id=395661133]
+script = ExtResource("5_session")
+
+[node name="ApplicationAudio" type="Node" parent="." unique_id=2002545812]
+script = ExtResource("7_audio")
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="." unique_id=572407905]
+layer = 0
+
+[node name="StaticBackground" parent="BackgroundLayer" unique_id=1842090366 instance=ExtResource("2_background")]
+
+[node name="UiLayer" type="CanvasLayer" parent="." unique_id=1814861110]
+
+[node name="ScreenHost" type="Control" parent="UiLayer" unique_id=635764758]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InteractivePetHost" parent="." unique_id=1226827678 instance=ExtResource("6_pet")]

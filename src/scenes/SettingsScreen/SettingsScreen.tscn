@@ -1,0 +1,2379 @@
+[gd_scene format=3 uid="uid://c86k7a2d7dpal"]
+
+[ext_resource type="Script" uid="uid://c5y1bwf3q8tp7" path="res://src/scenes/SettingsScreen/SettingsScreen.cs" id="1_script"]
+
+[node name="SettingsScreen" type="Control" unique_id=1004620256]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Footer" type="PanelContainer" parent="." unique_id=1945546126]
+z_index = 20
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = -120.0
+offset_right = -28.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_type_variation = &"WhitePanel"
+
+[node name="SaveAndExitButton" type="Button" parent="Footer" unique_id=1490711441]
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 2
+theme_type_variation = &"PrimaryButton"
+text = "СОХРАНИТЬ И ВЫЙТИ"
+
+[node name="SafeMargin" type="MarginContainer" parent="." unique_id=1771276379]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = 28.0
+offset_right = -28.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Scroll" type="ScrollContainer" parent="SafeMargin" unique_id=1730433592]
+custom_minimum_size = Vector2(0, 1100)
+layout_mode = 2
+size_flags_vertical = 0
+horizontal_scroll_mode = 0
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll" unique_id=1670934776]
+custom_minimum_size = Vector2(0, 1173)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 19
+
+[node name="Header" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=154820359]
+custom_minimum_size = Vector2(0, 107)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/Header" unique_id=2033082988]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 19
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 19
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/Header/Margin" unique_id=1892810197]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/Header/Margin/Content" unique_id=1212756635]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "НАСТРОЙКИ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SectionTabs" type="GridContainer" parent="SafeMargin/Scroll/Content" unique_id=1099846765]
+custom_minimum_size = Vector2(0, 157)
+layout_mode = 2
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+columns = 3
+
+[node name="GeneralButton" type="Button" parent="SafeMargin/Scroll/Content/SectionTabs" unique_id=390094413]
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "ОБЩИЕ"
+
+[node name="AudioButton" type="Button" parent="SafeMargin/Scroll/Content/SectionTabs" unique_id=1209434198]
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "ЗВУК"
+
+[node name="AdvertisementButton" type="Button" parent="SafeMargin/Scroll/Content/SectionTabs" unique_id=931340907]
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "ПРОМО"
+
+[node name="AppearanceButton" type="Button" parent="SafeMargin/Scroll/Content/SectionTabs" unique_id=1803958748]
+visible = false
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "ТЕМА"
+
+[node name="PricingButton" type="Button" parent="SafeMargin/Scroll/Content/SectionTabs" unique_id=2043412965]
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "ТАРИФЫ"
+
+[node name="PaymentButton" type="Button" parent="SafeMargin/Scroll/Content/SectionTabs" unique_id=750238068]
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "ОПЛАТА"
+
+[node name="ServiceButton" type="Button" parent="SafeMargin/Scroll/Content/SectionTabs" unique_id=1016115031]
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "СЕРВИС"
+
+[node name="EquipmentButton" type="Button" parent="SafeMargin/Scroll/Content/SectionTabs" unique_id=436932014]
+visible = false
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "ОБОРУД."
+
+[node name="DiagnosticsButton" type="Button" parent="SafeMargin/Scroll/Content/SectionTabs" unique_id=1314343470]
+visible = false
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "ДИАГНОСТ."
+
+[node name="BrandingPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=2078006035]
+custom_minimum_size = Vector2(0, 593)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/BrandingPanel" unique_id=1084754695]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/BrandingPanel/Margin" unique_id=288780598]
+layout_mode = 2
+theme_override_constants/separation = 9
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/BrandingPanel/Margin/Content" unique_id=1441920640]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ТЕКСТ НА ГЛАВНОМ ЭКРАНЕ"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/BrandingPanel/Margin/Content" unique_id=314471939]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Здесь можно изменить свой текст и телефон для покупателей."
+autowrap_mode = 2
+
+[node name="ApplicationNameLabel" type="Label" parent="SafeMargin/Scroll/Content/BrandingPanel/Margin/Content" unique_id=1972340592]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "НАЗВАНИЕ • ДО 48 ЗНАКОВ"
+
+[node name="ApplicationName" type="LineEdit" parent="SafeMargin/Scroll/Content/BrandingPanel/Margin/Content" unique_id=923442286]
+visible = false
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+placeholder_text = "РАЗМЕН ЖЕТОНОВ"
+max_length = 48
+
+[node name="ApplicationNameError" type="Label" parent="SafeMargin/Scroll/Content/BrandingPanel/Margin/Content" unique_id=172647480]
+visible = false
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 13
+autowrap_mode = 2
+
+[node name="ShortTextLabel" type="Label" parent="SafeMargin/Scroll/Content/BrandingPanel/Margin/Content" unique_id=819479477]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "СВОЙ ТЕКСТ • ДО 48 ЗНАКОВ"
+
+[node name="ShortText" type="LineEdit" parent="SafeMargin/Scroll/Content/BrandingPanel/Margin/Content" unique_id=1139772423]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+placeholder_text = "ПОЛУЧИ СВОИ ЖЕТОНЫ!"
+max_length = 48
+
+[node name="ShortTextError" type="Label" parent="SafeMargin/Scroll/Content/BrandingPanel/Margin/Content" unique_id=842352861]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 13
+autowrap_mode = 2
+
+[node name="SupportPhoneLabel" type="Label" parent="SafeMargin/Scroll/Content/BrandingPanel/Margin/Content" unique_id=1058802895]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "ТЕЛЕФОН ПОДДЕРЖКИ • ДО 80 ЗНАКОВ"
+
+[node name="SupportPhone" type="LineEdit" parent="SafeMargin/Scroll/Content/BrandingPanel/Margin/Content" unique_id=1224448315]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+placeholder_text = "+7 (000) 000-00-00"
+max_length = 80
+
+[node name="SupportPhoneError" type="Label" parent="SafeMargin/Scroll/Content/BrandingPanel/Margin/Content" unique_id=939950598]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 13
+autowrap_mode = 2
+
+[node name="AnimatedBannerTextsPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=96369172]
+custom_minimum_size = Vector2(0, 560)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/AnimatedBannerTextsPanel" unique_id=1227222778]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/AnimatedBannerTextsPanel/Margin" unique_id=1552734430]
+layout_mode = 2
+theme_override_constants/separation = 9
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/AnimatedBannerTextsPanel/Margin/Content" unique_id=254071629]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ТЕКСТЫ НА БАННЕРАХ"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/AnimatedBannerTextsPanel/Margin/Content" unique_id=245951890]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Тексты отображаются на нижних анимированных баннерах. В шаблоне таймера используйте {seconds} для числа секунд."
+autowrap_mode = 2
+
+[node name="CashPaymentLabel" type="Label" parent="SafeMargin/Scroll/Content/AnimatedBannerTextsPanel/Margin/Content" unique_id=291593623]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "НАЛИЧНЫЕ • ТЕКСТ НА БАННЕРЕ"
+
+[node name="CashPayment" type="LineEdit" parent="SafeMargin/Scroll/Content/AnimatedBannerTextsPanel/Margin/Content" unique_id=551938525]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+max_length = 120
+
+[node name="CardAmountLabel" type="Label" parent="SafeMargin/Scroll/Content/AnimatedBannerTextsPanel/Margin/Content" unique_id=1898909061]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "КАРТА • ВЫБОР СУММЫ"
+
+[node name="CardAmount" type="LineEdit" parent="SafeMargin/Scroll/Content/AnimatedBannerTextsPanel/Margin/Content" unique_id=847567979]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+max_length = 120
+
+[node name="CardCustomAmountLabel" type="Label" parent="SafeMargin/Scroll/Content/AnimatedBannerTextsPanel/Margin/Content" unique_id=624510856]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "КАРТА • ВВОД СУММЫ"
+
+[node name="CardCustomAmount" type="LineEdit" parent="SafeMargin/Scroll/Content/AnimatedBannerTextsPanel/Margin/Content" unique_id=185098521]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+max_length = 120
+
+[node name="CardTerminalCountdownLabel" type="Label" parent="SafeMargin/Scroll/Content/AnimatedBannerTextsPanel/Margin/Content" unique_id=440925862]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "КАРТА • ТАЙМЕР • {seconds} = СЕКУНДЫ"
+
+[node name="CardTerminalCountdown" type="LineEdit" parent="SafeMargin/Scroll/Content/AnimatedBannerTextsPanel/Margin/Content" unique_id=568974131]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+max_length = 120
+
+[node name="BrandingPreviewPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=378115165]
+visible = false
+custom_minimum_size = Vector2(0, 273)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/BrandingPreviewPanel" unique_id=253672003]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/BrandingPreviewPanel/Margin" unique_id=1113826782]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/BrandingPreviewPanel/Margin/Content" unique_id=160381550]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "КАК ЭТО УВИДИТ ПОКУПАТЕЛЬ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ApplicationName" type="Label" parent="SafeMargin/Scroll/Content/BrandingPreviewPanel/Margin/Content" unique_id=808413130]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "РАЗМЕН ЖЕТОНОВ"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ShortText" type="Label" parent="SafeMargin/Scroll/Content/BrandingPreviewPanel/Margin/Content" unique_id=1357483210]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "ПОЛУЧИ СВОИ ЖЕТОНЫ!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="SupportPhone" type="Label" parent="SafeMargin/Scroll/Content/BrandingPreviewPanel/Margin/Content" unique_id=85872323]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "ТЕХПОДДЕРЖКА • Телефон поддержки уточняется"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="SecurityPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=1879849850]
+custom_minimum_size = Vector2(0, 313)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/SecurityPanel" unique_id=962456073]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/SecurityPanel/Margin" unique_id=607567481]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/SecurityPanel/Margin/Content" unique_id=830468842]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ЗАЩИТА НАСТРОЕК"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/SecurityPanel/Margin/Content" unique_id=1393678109]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Включите защиту, если хотите открывать настройки только по PIN-коду. Приложение предложит придумать его при следующем входе."
+autowrap_mode = 2
+
+[node name="Enabled" type="CheckButton" parent="SafeMargin/Scroll/Content/SecurityPanel/Margin/Content" unique_id=558474112]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "ЗАЩИТИТЬ НАСТРОЙКИ PIN-КОДОМ"
+
+[node name="ResetPinButton" type="Button" parent="SafeMargin/Scroll/Content/SecurityPanel/Margin/Content" unique_id=1063988680]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "ПРИДУМАТЬ НОВЫЙ PIN"
+
+[node name="Status" type="Label" parent="SafeMargin/Scroll/Content/SecurityPanel/Margin/Content" unique_id=419034981]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Защита выключена."
+autowrap_mode = 2
+
+[node name="MasterPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=1198367056]
+custom_minimum_size = Vector2(0, 273)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/MasterPanel" unique_id=1657463854]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/MasterPanel/Margin" unique_id=1222038005]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/MasterPanel/Margin/Content" unique_id=2077123349]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ОБЩАЯ ГРОМКОСТЬ"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/MasterPanel/Margin/Content" unique_id=1560394233]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Громкость всех звуков автомата."
+autowrap_mode = 2
+
+[node name="VolumeRow" type="HBoxContainer" parent="SafeMargin/Scroll/Content/MasterPanel/Margin/Content" unique_id=150712937]
+custom_minimum_size = Vector2(0, 67)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Slider" type="HSlider" parent="SafeMargin/Scroll/Content/MasterPanel/Margin/Content/VolumeRow" unique_id=2060895330]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+
+[node name="Value" type="Label" parent="SafeMargin/Scroll/Content/MasterPanel/Margin/Content/VolumeRow" unique_id=2057703712]
+custom_minimum_size = Vector2(87, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "100%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Mute" type="CheckButton" parent="SafeMargin/Scroll/Content/MasterPanel/Margin/Content" unique_id=1848500350]
+custom_minimum_size = Vector2(0, 67)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "ОТКЛЮЧИТЬ ВСЕ ЗВУКИ"
+
+[node name="MusicPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content"]
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/MusicPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/MusicPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/MusicPanel/Margin/Content"]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ГРОМКОСТЬ МУЗЫКИ"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/MusicPanel/Margin/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Громкость фоновой музыки приложения."
+autowrap_mode = 2
+
+[node name="VolumeRow" type="HBoxContainer" parent="SafeMargin/Scroll/Content/MusicPanel/Margin/Content"]
+custom_minimum_size = Vector2(0, 67)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Slider" type="HSlider" parent="SafeMargin/Scroll/Content/MusicPanel/Margin/Content/VolumeRow"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+
+[node name="Value" type="Label" parent="SafeMargin/Scroll/Content/MusicPanel/Margin/Content/VolumeRow"]
+custom_minimum_size = Vector2(87, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "100%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="SoundEffectsPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content"]
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/SoundEffectsPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/SoundEffectsPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/SoundEffectsPanel/Margin/Content"]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ГРОМКОСТЬ ЗВУКОВ"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/SoundEffectsPanel/Margin/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Кнопки, платежи и интерактивный питомец."
+autowrap_mode = 2
+
+[node name="VolumeRow" type="HBoxContainer" parent="SafeMargin/Scroll/Content/SoundEffectsPanel/Margin/Content"]
+custom_minimum_size = Vector2(0, 67)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Slider" type="HSlider" parent="SafeMargin/Scroll/Content/SoundEffectsPanel/Margin/Content/VolumeRow"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+
+[node name="Value" type="Label" parent="SafeMargin/Scroll/Content/SoundEffectsPanel/Margin/Content/VolumeRow"]
+custom_minimum_size = Vector2(87, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "100%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="AdvertisementPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=1140295799]
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/AdvertisementPanel" unique_id=746826493]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/AdvertisementPanel/Margin" unique_id=652964597]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/AdvertisementPanel/Margin/Content" unique_id=912048069]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ГРОМКОСТЬ ПРОМО-РОЛИКА"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/AdvertisementPanel/Margin/Content" unique_id=1736411184]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Громкость звука в промо-роликах."
+autowrap_mode = 2
+
+[node name="VolumeRow" type="HBoxContainer" parent="SafeMargin/Scroll/Content/AdvertisementPanel/Margin/Content" unique_id=405566535]
+custom_minimum_size = Vector2(0, 67)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Slider" type="HSlider" parent="SafeMargin/Scroll/Content/AdvertisementPanel/Margin/Content/VolumeRow" unique_id=530125674]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+
+[node name="Value" type="Label" parent="SafeMargin/Scroll/Content/AdvertisementPanel/Margin/Content/VolumeRow" unique_id=2101989997]
+custom_minimum_size = Vector2(87, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "100%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TestPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=1383634412]
+custom_minimum_size = Vector2(0, 207)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/TestPanel" unique_id=130409172]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/TestPanel/Margin" unique_id=1257657298]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/TestPanel/Margin/Content" unique_id=1433324321]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ПРОВЕРКА"
+vertical_alignment = 1
+
+[node name="TestSoundButton" type="Button" parent="SafeMargin/Scroll/Content/TestPanel/Margin/Content" unique_id=1609783017]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+text = "ПРОВЕРИТЬ ЗВУК"
+
+[node name="Status" type="Label" parent="SafeMargin/Scroll/Content/TestPanel/Margin/Content" unique_id=2061523529]
+custom_minimum_size = Vector2(0, 47)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Настройки сохраняются автоматически."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AdvertisementSettingsPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=21455015]
+custom_minimum_size = Vector2(0, 440)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/AdvertisementSettingsPanel" unique_id=1405250504]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/AdvertisementSettingsPanel/Margin" unique_id=1013830763]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/AdvertisementSettingsPanel/Margin/Content" unique_id=1786577231]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ПРОМО НА ГЛАВНОМ ЭКРАНЕ"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/AdvertisementSettingsPanel/Margin/Content" unique_id=336744550]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Во время оплаты и выдачи жетонов промо скрывается."
+autowrap_mode = 2
+
+[node name="Enabled" type="CheckButton" parent="SafeMargin/Scroll/Content/AdvertisementSettingsPanel/Margin/Content" unique_id=1616831303]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "ПОКАЗЫВАТЬ ПРОМО"
+
+[node name="Muted" type="CheckButton" parent="SafeMargin/Scroll/Content/AdvertisementSettingsPanel/Margin/Content" unique_id=672717699]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "ПРОМО-РОЛИК БЕЗ ЗВУКА"
+
+[node name="FallbackLabel" type="Label" parent="SafeMargin/Scroll/Content/AdvertisementSettingsPanel/Margin/Content" unique_id=1641720039]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "ТЕКСТ ВМЕСТО ПРОМО • ДО 120 ЗНАКОВ"
+
+[node name="FallbackText" type="LineEdit" parent="SafeMargin/Scroll/Content/AdvertisementSettingsPanel/Margin/Content" unique_id=228850090]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+placeholder_text = "ПРОМО-БЛОК"
+max_length = 120
+
+[node name="FallbackError" type="Label" parent="SafeMargin/Scroll/Content/AdvertisementSettingsPanel/Margin/Content" unique_id=1143025908]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 13
+autowrap_mode = 2
+
+[node name="AdvertisementPosterPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=455807788]
+custom_minimum_size = Vector2(0, 370)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/AdvertisementPosterPanel" unique_id=1508974411]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/AdvertisementPosterPanel/Margin" unique_id=245064043]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/AdvertisementPosterPanel/Margin/Content" unique_id=816209396]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "КАРТИНКА ВМЕСТО ПРОМО-РОЛИКА"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/AdvertisementPosterPanel/Margin/Content" unique_id=1218265445]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Укажите путь к картинке на этом компьютере. Подойдут PNG, JPG и WEBP."
+autowrap_mode = 2
+
+[node name="PosterPath" type="LineEdit" parent="SafeMargin/Scroll/Content/AdvertisementPosterPanel/Margin/Content" unique_id=732541286]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+placeholder_text = "Например: D:/Промо/постер.png"
+max_length = 512
+
+[node name="SelectButton" type="Button" parent="SafeMargin/Scroll/Content/AdvertisementPosterPanel/Margin/Content" unique_id=1090666710]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+text = "ВЫБРАТЬ КАРТИНКУ"
+
+[node name="Error" type="Label" parent="SafeMargin/Scroll/Content/AdvertisementPosterPanel/Margin/Content" unique_id=2129938351]
+custom_minimum_size = Vector2(0, 47)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 13
+autowrap_mode = 2
+
+[node name="AdvertisementPlaylistPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=1828835854]
+custom_minimum_size = Vector2(0, 287)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/AdvertisementPlaylistPanel" unique_id=1696350498]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/AdvertisementPlaylistPanel/Margin" unique_id=50006063]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/AdvertisementPlaylistPanel/Margin/Content" unique_id=483709700]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ПРОМО-РОЛИКИ"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/AdvertisementPlaylistPanel/Margin/Content" unique_id=1727337488]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Добавьте до 12 промо-роликов в нужном порядке. Поддерживаются файлы OGV."
+autowrap_mode = 2
+
+[node name="Rows" type="VBoxContainer" parent="SafeMargin/Scroll/Content/AdvertisementPlaylistPanel/Margin/Content" unique_id=1297952818]
+custom_minimum_size = Vector2(0, 47)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="AddButton" type="Button" parent="SafeMargin/Scroll/Content/AdvertisementPlaylistPanel/Margin/Content" unique_id=1496917419]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+text = "ВЫБРАТЬ И ДОБАВИТЬ ПРОМО-РОЛИК"
+
+[node name="Error" type="Label" parent="SafeMargin/Scroll/Content/AdvertisementPlaylistPanel/Margin/Content" unique_id=1649782226]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 13
+autowrap_mode = 2
+
+[node name="AdvertisementPreviewPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=193189850]
+visible = false
+custom_minimum_size = Vector2(0, 167)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/AdvertisementPreviewPanel" unique_id=923292165]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 20
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/AdvertisementPreviewPanel/Margin" unique_id=617595689]
+layout_mode = 2
+theme_override_constants/separation = 11
+alignment = 1
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/AdvertisementPreviewPanel/Margin/Content" unique_id=572843131]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "ПРЕДВАРИТЕЛЬНЫЙ ИТОГ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Summary" type="Label" parent="SafeMargin/Scroll/Content/AdvertisementPreviewPanel/Margin/Content" unique_id=1780700717]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "Промо включено • картинка не выбрана • промо-роликов: 0
+Текст вместо промо: ПРОМО-БЛОК"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="AppearanceThemePanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=1626819618]
+visible = false
+custom_minimum_size = Vector2(0, 460)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/AppearanceThemePanel" unique_id=1429095905]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/AppearanceThemePanel/Margin" unique_id=1782922611]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/AppearanceThemePanel/Margin/Content" unique_id=1789600456]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ВНЕШНЯЯ ТЕМА"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/AppearanceThemePanel/Margin/Content" unique_id=1804153132]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Приложение всегда имеет одну встроенную тему. Единственный внешний DLC полностью заменит её после перезапуска, если пакет пройдёт проверку."
+autowrap_mode = 2
+
+[node name="ExternalEnabled" type="CheckButton" parent="SafeMargin/Scroll/Content/AppearanceThemePanel/Margin/Content" unique_id=1434776624]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "ИСПОЛЬЗОВАТЬ ВНЕШНИЙ DLC"
+
+[node name="PathLabel" type="Label" parent="SafeMargin/Scroll/Content/AppearanceThemePanel/Margin/Content" unique_id=1039205902]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "ПУТЬ К ПАКЕТУ .PCK"
+
+[node name="ExternalPath" type="LineEdit" parent="SafeMargin/Scroll/Content/AppearanceThemePanel/Margin/Content" unique_id=435170720]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+placeholder_text = "user://theme_dlc/active_theme.pck"
+max_length = 512
+
+[node name="PathError" type="Label" parent="SafeMargin/Scroll/Content/AppearanceThemePanel/Margin/Content" unique_id=538466093]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 13
+autowrap_mode = 2
+
+[node name="PackageStatus" type="Label" parent="SafeMargin/Scroll/Content/AppearanceThemePanel/Margin/Content" unique_id=1243517659]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Пакет будет проверен при запуске."
+autowrap_mode = 2
+
+[node name="AppearanceEffectsPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=2118148985]
+visible = false
+custom_minimum_size = Vector2(0, 260)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/AppearanceEffectsPanel" unique_id=1463853577]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/AppearanceEffectsPanel/Margin" unique_id=460821403]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/AppearanceEffectsPanel/Margin/Content" unique_id=1219490666]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ЭФФЕКТЫ"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/AppearanceEffectsPanel/Margin/Content" unique_id=1195218204]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Облегчённый режим отключает необязательные анимированные спрайты, но сохраняет статический фон и весь интерфейс."
+autowrap_mode = 2
+
+[node name="ReducedEffects" type="CheckButton" parent="SafeMargin/Scroll/Content/AppearanceEffectsPanel/Margin/Content" unique_id=336415120]
+custom_minimum_size = Vector2(0, 67)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "ОБЛЕГЧЁННЫЙ РЕЖИМ"
+
+[node name="AppearanceNoticePanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=391044970]
+visible = false
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/AppearanceNoticePanel" unique_id=716854481]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 20
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/AppearanceNoticePanel/Margin" unique_id=400003096]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/AppearanceNoticePanel/Margin/Content" unique_id=1138899540]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "ПРИМЕНЕНИЕ ИЗМЕНЕНИЙ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Immediate" type="Label" parent="SafeMargin/Scroll/Content/AppearanceNoticePanel/Margin/Content" unique_id=263463990]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Облегчённый режим применяется сразу."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Restart" type="Label" parent="SafeMargin/Scroll/Content/AppearanceNoticePanel/Margin/Content" unique_id=1044968640]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.78, 0.25, 1)
+theme_override_font_sizes/font_size = 15
+text = "Включение DLC и путь к нему применятся только после перезапуска приложения."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CurrentTheme" type="Label" parent="SafeMargin/Scroll/Content/AppearanceNoticePanel/Margin/Content" unique_id=869113996]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Сейчас активна встроенная тема."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="PricePanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=1175190762]
+visible = false
+custom_minimum_size = Vector2(0, 247)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/PricePanel" unique_id=1252255186]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/PricePanel/Margin" unique_id=37103992]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/PricePanel/Margin/Content" unique_id=1223521084]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "СТОИМОСТЬ ОДНОГО ЖЕТОНА"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/PricePanel/Margin/Content" unique_id=442890264]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "По этой цене автомат рассчитывает, сколько жетонов получит покупатель."
+autowrap_mode = 2
+
+[node name="Price" type="SpinBox" parent="SafeMargin/Scroll/Content/PricePanel/Margin/Content" unique_id=906569844]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+max_value = 100000.0
+value = 10.0
+update_on_text_changed = true
+suffix = " ₽"
+
+[node name="Error" type="Label" parent="SafeMargin/Scroll/Content/PricePanel/Margin/Content" unique_id=1786171896]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 15
+autowrap_mode = 2
+
+[node name="BonusPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=1271515153]
+visible = false
+custom_minimum_size = Vector2(0, 347)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/BonusPanel" unique_id=1639657177]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/BonusPanel/Margin" unique_id=452757233]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/BonusPanel/Margin/Content" unique_id=176636309]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ДОПОЛНИТЕЛЬНЫЕ ЖЕТОНЫ"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/BonusPanel/Margin/Content" unique_id=2054989766]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Например: при оплате от 500 ₽ подарить 5 жетонов. Если подходят несколько правил, сработает самое выгодное."
+autowrap_mode = 2
+
+[node name="ColumnHeaders" type="HBoxContainer" parent="SafeMargin/Scroll/Content/BonusPanel/Margin/Content" unique_id=1779316545]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme_override_constants/separation = 11
+
+[node name="Threshold" type="Label" parent="SafeMargin/Scroll/Content/BonusPanel/Margin/Content/ColumnHeaders" unique_id=1516500981]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 13
+text = "СУММА ОПЛАТЫ ОТ"
+
+[node name="Bonus" type="Label" parent="SafeMargin/Scroll/Content/BonusPanel/Margin/Content/ColumnHeaders" unique_id=730440012]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "ЖЕТОНОВ В ПОДАРОК"
+
+[node name="Spacer" type="Control" parent="SafeMargin/Scroll/Content/BonusPanel/Margin/Content/ColumnHeaders" unique_id=293311810]
+custom_minimum_size = Vector2(103, 0)
+layout_mode = 2
+
+[node name="Rows" type="VBoxContainer" parent="SafeMargin/Scroll/Content/BonusPanel/Margin/Content" unique_id=1591524546]
+layout_mode = 2
+theme_override_constants/separation = 9
+
+[node name="AddRuleButton" type="Button" parent="SafeMargin/Scroll/Content/BonusPanel/Margin/Content" unique_id=1425772859]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+text = "+ ДОБАВИТЬ БОНУС"
+
+[node name="Error" type="Label" parent="SafeMargin/Scroll/Content/BonusPanel/Margin/Content" unique_id=397393203]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 15
+autowrap_mode = 2
+
+[node name="PreviewPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=1550161471]
+visible = false
+custom_minimum_size = Vector2(0, 247)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/PreviewPanel" unique_id=1017412349]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/PreviewPanel/Margin" unique_id=1259875287]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/PreviewPanel/Margin/Content" unique_id=1565228186]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ПРИМЕР РАСЧЁТА"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/PreviewPanel/Margin/Content" unique_id=1558111681]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Столько жетонов получит покупатель при разных суммах оплаты."
+autowrap_mode = 2
+
+[node name="Values" type="Label" parent="SafeMargin/Scroll/Content/PreviewPanel/Margin/Content" unique_id=1890400642]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "10 ₽ → 1 + 0 = 1 жет."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="PaymentMethodsPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=1014677861]
+visible = false
+custom_minimum_size = Vector2(0, 260)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/PaymentMethodsPanel" unique_id=1681526059]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/PaymentMethodsPanel/Margin" unique_id=1821598693]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/PaymentMethodsPanel/Margin/Content" unique_id=1268252060]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "СПОСОБЫ ОПЛАТЫ"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/PaymentMethodsPanel/Margin/Content" unique_id=71570643]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Оставьте хотя бы один доступный способ оплаты."
+autowrap_mode = 2
+
+[node name="CashEnabled" type="CheckButton" parent="SafeMargin/Scroll/Content/PaymentMethodsPanel/Margin/Content" unique_id=1651424955]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "НАЛИЧНАЯ ОПЛАТА"
+
+[node name="CardEnabled" type="CheckButton" parent="SafeMargin/Scroll/Content/PaymentMethodsPanel/Margin/Content" unique_id=60921604]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "ОПЛАТА КАРТОЙ"
+
+[node name="Error" type="Label" parent="SafeMargin/Scroll/Content/PaymentMethodsPanel/Margin/Content" unique_id=614267083]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 15
+autowrap_mode = 2
+
+[node name="CardOptionsPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=1947991433]
+visible = false
+custom_minimum_size = Vector2(0, 393)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/CardOptionsPanel" unique_id=1880854225]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/CardOptionsPanel/Margin" unique_id=1861346620]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/CardOptionsPanel/Margin/Content" unique_id=1252395405]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "СУММЫ ДЛЯ ОПЛАТЫ КАРТОЙ"
+vertical_alignment = 1
+
+[node name="Limits" type="GridContainer" parent="SafeMargin/Scroll/Content/CardOptionsPanel/Margin/Content" unique_id=796782793]
+layout_mode = 2
+theme_override_constants/h_separation = 13
+theme_override_constants/v_separation = 9
+columns = 2
+
+[node name="MaxLabel" type="Label" parent="SafeMargin/Scroll/Content/CardOptionsPanel/Margin/Content/Limits" unique_id=1157864144]
+custom_minimum_size = Vector2(240, 63)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "МАКСИМАЛЬНАЯ СУММА"
+vertical_alignment = 1
+
+[node name="MaxAmount" type="SpinBox" parent="SafeMargin/Scroll/Content/CardOptionsPanel/Margin/Content/Limits" unique_id=945870327]
+custom_minimum_size = Vector2(0, 63)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1000000.0
+value = 5000.0
+update_on_text_changed = true
+suffix = " ₽"
+
+[node name="StepLabel" type="Label" parent="SafeMargin/Scroll/Content/CardOptionsPanel/Margin/Content/Limits" unique_id=117453909]
+custom_minimum_size = Vector2(240, 63)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "ШАГ ВЫБОРА СУММЫ"
+vertical_alignment = 1
+
+[node name="CustomStep" type="SpinBox" parent="SafeMargin/Scroll/Content/CardOptionsPanel/Margin/Content/Limits" unique_id=2056772758]
+custom_minimum_size = Vector2(0, 63)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1000000.0
+value = 10.0
+update_on_text_changed = true
+suffix = " ₽"
+
+[node name="LimitsError" type="Label" parent="SafeMargin/Scroll/Content/CardOptionsPanel/Margin/Content" unique_id=1784116878]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 15
+autowrap_mode = 2
+
+[node name="PresetsTitle" type="Label" parent="SafeMargin/Scroll/Content/CardOptionsPanel/Margin/Content" unique_id=3400869]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "ГОТОВЫЕ СУММЫ"
+
+[node name="PresetRows" type="VBoxContainer" parent="SafeMargin/Scroll/Content/CardOptionsPanel/Margin/Content" unique_id=783857380]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="AddPresetButton" type="Button" parent="SafeMargin/Scroll/Content/CardOptionsPanel/Margin/Content" unique_id=1011694991]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+text = "+ ДОБАВИТЬ СУММУ"
+
+[node name="PresetsError" type="Label" parent="SafeMargin/Scroll/Content/CardOptionsPanel/Margin/Content" unique_id=1336764151]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 15
+autowrap_mode = 2
+
+[node name="TimeoutsPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=225381422]
+visible = false
+custom_minimum_size = Vector2(0, 380)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/TimeoutsPanel" unique_id=1678816813]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/TimeoutsPanel/Margin" unique_id=2108046571]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/TimeoutsPanel/Margin/Content" unique_id=423508686]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ВРЕМЯ ОЖИДАНИЯ"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/TimeoutsPanel/Margin/Content" unique_id=844982832]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Настройте, сколько времени автомат ждёт действий покупателя."
+autowrap_mode = 2
+
+[node name="Grid" type="GridContainer" parent="SafeMargin/Scroll/Content/TimeoutsPanel/Margin/Content" unique_id=987524088]
+layout_mode = 2
+theme_override_constants/h_separation = 13
+theme_override_constants/v_separation = 9
+columns = 2
+
+[node name="IdleLabel" type="Label" parent="SafeMargin/Scroll/Content/TimeoutsPanel/Margin/Content/Grid" unique_id=1311503414]
+custom_minimum_size = Vector2(273, 63)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "ВОЗВРАТ НА ГЛАВНЫЙ (15–600 С)"
+vertical_alignment = 1
+
+[node name="Idle" type="SpinBox" parent="SafeMargin/Scroll/Content/TimeoutsPanel/Margin/Content/Grid" unique_id=396087782]
+custom_minimum_size = Vector2(0, 63)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 600.0
+value = 45.0
+update_on_text_changed = true
+suffix = " с"
+
+[node name="CashPaymentLabel" type="Label" parent="SafeMargin/Scroll/Content/TimeoutsPanel/Margin/Content/Grid" unique_id=254111291]
+custom_minimum_size = Vector2(273, 63)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "ОПЛАТА НАЛИЧНЫМИ (15–600 С)"
+vertical_alignment = 1
+
+[node name="CashPayment" type="SpinBox" parent="SafeMargin/Scroll/Content/TimeoutsPanel/Margin/Content/Grid" unique_id=800168430]
+custom_minimum_size = Vector2(0, 63)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 600.0
+value = 45.0
+update_on_text_changed = true
+suffix = " с"
+
+[node name="CashlessPaymentLabel" type="Label" parent="SafeMargin/Scroll/Content/TimeoutsPanel/Margin/Content/Grid" unique_id=1208879355]
+custom_minimum_size = Vector2(273, 63)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "БЕЗНАЛИЧНАЯ ОПЛАТА (30–600 С)"
+vertical_alignment = 1
+
+[node name="CashlessPayment" type="SpinBox" parent="SafeMargin/Scroll/Content/TimeoutsPanel/Margin/Content/Grid" unique_id=1091295659]
+custom_minimum_size = Vector2(0, 63)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 600.0
+value = 120.0
+update_on_text_changed = true
+suffix = " с"
+
+[node name="SuccessLabel" type="Label" parent="SafeMargin/Scroll/Content/TimeoutsPanel/Margin/Content/Grid" unique_id=1606719904]
+custom_minimum_size = Vector2(273, 63)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "ПОКАЗЫВАТЬ РЕЗУЛЬТАТ (3–60 С)"
+vertical_alignment = 1
+
+[node name="Success" type="SpinBox" parent="SafeMargin/Scroll/Content/TimeoutsPanel/Margin/Content/Grid" unique_id=1946483701]
+custom_minimum_size = Vector2(0, 63)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 60.0
+value = 10.0
+update_on_text_changed = true
+suffix = " с"
+
+[node name="Error" type="Label" parent="SafeMargin/Scroll/Content/TimeoutsPanel/Margin/Content" unique_id=53635746]
+custom_minimum_size = Vector2(0, 53)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 15
+autowrap_mode = 2
+
+[node name="ServiceInventoryPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=2042296359]
+visible = false
+custom_minimum_size = Vector2(0, 790)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/ServiceInventoryPanel" unique_id=1503050331]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/ServiceInventoryPanel/Margin" unique_id=415160084]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/ServiceInventoryPanel/Margin/Content" unique_id=50024203]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "УЧЁТ ЖЕТОНОВ"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/ServiceInventoryPanel/Margin/Content" unique_id=1341031120]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "Здесь показан учтённый остаток жетонов в автомате."
+autowrap_mode = 2
+
+[node name="InventoryAccountingEnabled" type="CheckButton" parent="SafeMargin/Scroll/Content/ServiceInventoryPanel/Margin/Content" unique_id=848823675]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+button_pressed = true
+text = "УЧИТЫВАТЬ ОСТАТОК ЖЕТОНОВ"
+
+[node name="PurchaseLimitEnabled" type="CheckButton" parent="SafeMargin/Scroll/Content/ServiceInventoryPanel/Margin/Content" unique_id=570704545]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+button_pressed = true
+text = "НЕ ПРОДАВАТЬ БОЛЬШЕ ОСТАТКА"
+
+[node name="Count" type="Label" parent="SafeMargin/Scroll/Content/ServiceInventoryPanel/Margin/Content" unique_id=1480182659]
+custom_minimum_size = Vector2(0, 62)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "нет жетонов"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hopper1Label" type="Label" parent="SafeMargin/Scroll/Content/ServiceInventoryPanel/Margin/Content" unique_id=332728729]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "ХОППЕР 1 — ОСТАТОК: 0 ЖЕТОНОВ"
+
+[node name="Hopper1" type="HBoxContainer" parent="SafeMargin/Scroll/Content/ServiceInventoryPanel/Margin/Content" unique_id=1858502461]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="RecountButton" type="Button" parent="SafeMargin/Scroll/Content/ServiceInventoryPanel/Margin/Content/Hopper1" unique_id=1569306220]
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ПЕРЕСЧИТАТЬ"
+
+[node name="ManualAddButton" type="Button" parent="SafeMargin/Scroll/Content/ServiceInventoryPanel/Margin/Content/Hopper1" unique_id=248322893]
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ДОБАВИТЬ"
+
+[node name="Hopper2Label" type="Label" parent="SafeMargin/Scroll/Content/ServiceInventoryPanel/Margin/Content" unique_id=1576863544]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "ХОППЕР 2 — ОСТАТОК: 0 ЖЕТОНОВ"
+
+[node name="Hopper2" type="HBoxContainer" parent="SafeMargin/Scroll/Content/ServiceInventoryPanel/Margin/Content" unique_id=168170001]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="RecountButton" type="Button" parent="SafeMargin/Scroll/Content/ServiceInventoryPanel/Margin/Content/Hopper2" unique_id=1255893731]
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ПЕРЕСЧИТАТЬ"
+
+[node name="ManualAddButton" type="Button" parent="SafeMargin/Scroll/Content/ServiceInventoryPanel/Margin/Content/Hopper2" unique_id=2003496454]
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ДОБАВИТЬ"
+
+[node name="Status" type="Label" parent="SafeMargin/Scroll/Content/ServiceInventoryPanel/Margin/Content" unique_id=1503550853]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Выберите способ обновления остатка."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MenuVisibilityPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=1978534157]
+visible = false
+custom_minimum_size = Vector2(0, 360)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/MenuVisibilityPanel" unique_id=1574035373]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/MenuVisibilityPanel/Margin" unique_id=293653996]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/MenuVisibilityPanel/Margin/Content" unique_id=902387806]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "СКРЫТИЕ ЭЛЕМЕНТОВ МЕНЮ"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/MenuVisibilityPanel/Margin/Content" unique_id=30041364]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Отключите элементы, которые не нужно показывать на главном экране."
+autowrap_mode = 2
+
+[node name="ShowStockStatus" type="CheckButton" parent="SafeMargin/Scroll/Content/MenuVisibilityPanel/Margin/Content" unique_id=381327417]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+button_pressed = true
+text = "ПОКАЗЫВАТЬ ОСТАТОК ЖЕТОНОВ"
+
+[node name="ShowRightCharacter" type="CheckButton" parent="SafeMargin/Scroll/Content/MenuVisibilityPanel/Margin/Content" unique_id=1015502450]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+button_pressed = true
+text = "ПОКАЗЫВАТЬ ПОЛЬЗОВАТЕЛЬСКИЙ ТЕКСТ"
+
+[node name="ShowPromotionBlock" type="CheckButton" parent="SafeMargin/Scroll/Content/MenuVisibilityPanel/Margin/Content" unique_id=907920400]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+button_pressed = true
+text = "ПОКАЗЫВАТЬ ПРОМО-БЛОК"
+
+[node name="ShowInteractivePet" type="CheckButton" parent="SafeMargin/Scroll/Content/MenuVisibilityPanel/Margin/Content" unique_id=25266727]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+button_pressed = true
+text = "ИНТЕРАКТИВНЫЙ ПИТОМЕЦ"
+
+[node name="EquipmentConnectionPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=12227059]
+visible = false
+custom_minimum_size = Vector2(0, 607)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/EquipmentConnectionPanel" unique_id=1058768579]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/EquipmentConnectionPanel/Margin" unique_id=1950970524]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/EquipmentConnectionPanel/Margin/Content" unique_id=608936661]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ПОДКЛЮЧЕНИЕ К КОНТРОЛЛЕРУ"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/EquipmentConnectionPanel/Margin/Content" unique_id=735739671]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Только для инженера. Изменения применяются после перезапуска и никогда не выполняют reconnect во время открытой операции."
+autowrap_mode = 2
+
+[node name="UseMock" type="CheckButton" parent="SafeMargin/Scroll/Content/EquipmentConnectionPanel/Margin/Content" unique_id=1144904040]
+custom_minimum_size = Vector2(0, 63)
+layout_mode = 2
+text = "ИСПОЛЬЗОВАТЬ ИМИТАЦИЮ ОБОРУДОВАНИЯ"
+
+[node name="PortLabel" type="Label" parent="SafeMargin/Scroll/Content/EquipmentConnectionPanel/Margin/Content" unique_id=1595492564]
+layout_mode = 2
+text = "COM-ПОРТ"
+
+[node name="PortName" type="LineEdit" parent="SafeMargin/Scroll/Content/EquipmentConnectionPanel/Margin/Content" unique_id=1760832797]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+placeholder_text = "COM3"
+max_length = 16
+
+[node name="PortError" type="Label" parent="SafeMargin/Scroll/Content/EquipmentConnectionPanel/Margin/Content" unique_id=993828178]
+custom_minimum_size = Vector2(0, 37)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 15
+autowrap_mode = 2
+
+[node name="BaudLabel" type="Label" parent="SafeMargin/Scroll/Content/EquipmentConnectionPanel/Margin/Content" unique_id=1392931961]
+layout_mode = 2
+text = "СКОРОСТЬ ПОРТА"
+
+[node name="BaudRate" type="OptionButton" parent="SafeMargin/Scroll/Content/EquipmentConnectionPanel/Margin/Content" unique_id=810177550]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="ReconnectLabel" type="Label" parent="SafeMargin/Scroll/Content/EquipmentConnectionPanel/Margin/Content" unique_id=1591920916]
+layout_mode = 2
+text = "ПОВТОР ПОДКЛЮЧЕНИЯ (1–60 С)"
+
+[node name="ReconnectSeconds" type="SpinBox" parent="SafeMargin/Scroll/Content/EquipmentConnectionPanel/Margin/Content" unique_id=175154894]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+min_value = 1.0
+max_value = 60.0
+value = 5.0
+update_on_text_changed = true
+suffix = " с"
+
+[node name="ConnectionError" type="Label" parent="SafeMargin/Scroll/Content/EquipmentConnectionPanel/Margin/Content" unique_id=242906874]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 15
+autowrap_mode = 2
+
+[node name="EquipmentWindowPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=1569238897]
+visible = false
+custom_minimum_size = Vector2(0, 433)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/EquipmentWindowPanel" unique_id=1468236776]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/EquipmentWindowPanel/Margin" unique_id=660658614]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/EquipmentWindowPanel/Margin/Content" unique_id=1729915087]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ОКНО И ПРОИЗВОДИТЕЛЬНОСТЬ"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/EquipmentWindowPanel/Margin/Content" unique_id=1381667443]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Инженерные restart-only параметры. Размер debug-окна и низкоуровневые параметры протокола намеренно не редактируются здесь."
+autowrap_mode = 2
+
+[node name="Fullscreen" type="CheckButton" parent="SafeMargin/Scroll/Content/EquipmentWindowPanel/Margin/Content" unique_id=859230815]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "ПОЛНОЭКРАННЫЙ РЕЖИМ"
+
+[node name="Borderless" type="CheckButton" parent="SafeMargin/Scroll/Content/EquipmentWindowPanel/Margin/Content" unique_id=445076357]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "ОКНО БЕЗ РАМКИ"
+
+[node name="DebugWindow" type="CheckButton" parent="SafeMargin/Scroll/Content/EquipmentWindowPanel/Margin/Content" unique_id=1119698600]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "DEBUG-СБОРКА ЗАПУСКАЕТСЯ В ОКНЕ"
+
+[node name="FpsLabel" type="Label" parent="SafeMargin/Scroll/Content/EquipmentWindowPanel/Margin/Content" unique_id=67242259]
+layout_mode = 2
+text = "ЦЕЛЕВОЙ FPS"
+
+[node name="TargetFps" type="OptionButton" parent="SafeMargin/Scroll/Content/EquipmentWindowPanel/Margin/Content" unique_id=48472713]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="EquipmentNotice" type="Label" parent="SafeMargin/Scroll/Content/EquipmentWindowPanel/Margin/Content" unique_id=1717442777]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.72, 0.2, 1)
+theme_override_font_sizes/font_size = 15
+text = "AES-ключ, режим шифрования, команды выдачи, framing и параметры датчика не показываются и не сохраняются через этот экран."
+autowrap_mode = 2
+
+[node name="DiagnosticsStatusPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=63855322]
+visible = false
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/DiagnosticsStatusPanel" unique_id=363101112]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/DiagnosticsStatusPanel/Margin" unique_id=1447109247]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/DiagnosticsStatusPanel/Margin/Content" unique_id=1149194245]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "СОСТОЯНИЕ ПРИЛОЖЕНИЯ"
+vertical_alignment = 1
+
+[node name="RuntimeSummary" type="Label" parent="SafeMargin/Scroll/Content/DiagnosticsStatusPanel/Margin/Content" unique_id=1086182449]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Версия и состояние загружаются при открытии."
+autowrap_mode = 2
+
+[node name="RecentErrorsTitle" type="Label" parent="SafeMargin/Scroll/Content/DiagnosticsStatusPanel/Margin/Content" unique_id=1121096725]
+layout_mode = 2
+text = "ПОСЛЕДНИЕ БЕЗОПАСНЫЕ ПРЕДУПРЕЖДЕНИЯ"
+
+[node name="RecentErrors" type="Label" parent="SafeMargin/Scroll/Content/DiagnosticsStatusPanel/Margin/Content" unique_id=601475052]
+custom_minimum_size = Vector2(0, 147)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Нет предупреждений."
+autowrap_mode = 2
+
+[node name="DiagnosticsLoggingPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=246114907]
+visible = false
+custom_minimum_size = Vector2(0, 467)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/DiagnosticsLoggingPanel" unique_id=618088528]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/DiagnosticsLoggingPanel/Margin" unique_id=1603972519]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/DiagnosticsLoggingPanel/Margin/Content" unique_id=728718139]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ЖУРНАЛИРОВАНИЕ"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/DiagnosticsLoggingPanel/Margin/Content" unique_id=1279998568]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Изменения применяются сразу. Общий объём архивов автоматически ограничен десятью максимальными файлами. Сырые кадры протокола недоступны."
+autowrap_mode = 2
+
+[node name="LevelLabel" type="Label" parent="SafeMargin/Scroll/Content/DiagnosticsLoggingPanel/Margin/Content" unique_id=1684427359]
+layout_mode = 2
+text = "МИНИМАЛЬНЫЙ УРОВЕНЬ"
+
+[node name="MinimumLevel" type="OptionButton" parent="SafeMargin/Scroll/Content/DiagnosticsLoggingPanel/Margin/Content" unique_id=1516855564]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="SizeLabel" type="Label" parent="SafeMargin/Scroll/Content/DiagnosticsLoggingPanel/Margin/Content" unique_id=1036811316]
+layout_mode = 2
+text = "МАКСИМАЛЬНЫЙ РАЗМЕР ФАЙЛА (1–100 МБ)"
+
+[node name="MaxFileSize" type="SpinBox" parent="SafeMargin/Scroll/Content/DiagnosticsLoggingPanel/Margin/Content" unique_id=379652985]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+min_value = 1.0
+value = 5.0
+update_on_text_changed = true
+suffix = " МБ"
+
+[node name="RetentionLabel" type="Label" parent="SafeMargin/Scroll/Content/DiagnosticsLoggingPanel/Margin/Content" unique_id=1113473421]
+layout_mode = 2
+text = "СРОК ХРАНЕНИЯ (1–365 ДНЕЙ)"
+
+[node name="RetentionDays" type="SpinBox" parent="SafeMargin/Scroll/Content/DiagnosticsLoggingPanel/Margin/Content" unique_id=1996036056]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+min_value = 1.0
+max_value = 365.0
+value = 14.0
+update_on_text_changed = true
+suffix = " дн."
+
+[node name="LoggingError" type="Label" parent="SafeMargin/Scroll/Content/DiagnosticsLoggingPanel/Margin/Content" unique_id=722071223]
+custom_minimum_size = Vector2(0, 47)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 15
+autowrap_mode = 2
+
+[node name="DiagnosticsTestPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content" unique_id=2121165678]
+visible = false
+custom_minimum_size = Vector2(0, 287)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/DiagnosticsTestPanel" unique_id=1592965841]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 23
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/DiagnosticsTestPanel/Margin" unique_id=1036673328]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/DiagnosticsTestPanel/Margin/Content" unique_id=1717665009]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ТЕСТОВАЯ ВЫДАЧА"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Scroll/Content/DiagnosticsTestPanel/Margin/Content" unique_id=537707851]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Выдаёт один жетон без оплаты. Требует готового контроллера и повторного подтверждения кнопкой."
+autowrap_mode = 2
+
+[node name="TestDispenseButton" type="Button" parent="SafeMargin/Scroll/Content/DiagnosticsTestPanel/Margin/Content" unique_id=263785982]
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+text = "ТЕСТ: ВЫДАТЬ 1 ЖЕТОН"
+
+[node name="TestDispenseStatus" type="Label" parent="SafeMargin/Scroll/Content/DiagnosticsTestPanel/Margin/Content" unique_id=2115719528]
+custom_minimum_size = Vector2(0, 47)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Тест не запущен."
+autowrap_mode = 2
+
+[node name="FooterClearance" type="Control" parent="SafeMargin/Scroll/Content" unique_id=1077701238]
+custom_minimum_size = Vector2(0, 112)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ServiceDialogOverlay" type="Control" parent="SafeMargin" unique_id=975283658]
+visible = false
+z_index = 40
+layout_mode = 2
+
+[node name="Dimmer" type="ColorRect" parent="SafeMargin/ServiceDialogOverlay" unique_id=1096773228]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.01, 0.025, 0.07, 0.82)
+
+[node name="Dialog" type="PanelContainer" parent="SafeMargin/ServiceDialogOverlay" unique_id=1757529227]
+custom_minimum_size = Vector2(560, 420)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -210.0
+offset_right = 280.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/ServiceDialogOverlay/Dialog" unique_id=1050094340]
+layout_mode = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 26
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 26
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/ServiceDialogOverlay/Dialog/Margin" unique_id=1655215111]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Title" type="Label" parent="SafeMargin/ServiceDialogOverlay/Dialog/Margin/Content" unique_id=1890850509]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "УЧЁТ ЖЕТОНОВ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/ServiceDialogOverlay/Dialog/Margin/Content" unique_id=403447307]
+custom_minimum_size = Vector2(0, 92)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Проверьте количество жетонов."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Amount" type="SpinBox" parent="SafeMargin/ServiceDialogOverlay/Dialog/Margin/Content" unique_id=1631693201]
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 2
+max_value = 1000000.0
+update_on_text_changed = true
+
+[node name="Buttons" type="HBoxContainer" parent="SafeMargin/ServiceDialogOverlay/Dialog/Margin/Content" unique_id=1601555600]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="CancelButton" type="Button" parent="SafeMargin/ServiceDialogOverlay/Dialog/Margin/Content/Buttons" unique_id=1947309597]
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ОТМЕНА"
+
+[node name="ConfirmButton" type="Button" parent="SafeMargin/ServiceDialogOverlay/Dialog/Margin/Content/Buttons" unique_id=1706534341]
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ПОДТВЕРДИТЬ"
+
+[node name="KeyboardOverlay" type="Control" parent="SafeMargin" unique_id=2137340438]
+z_index = 50
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextKeyboard" type="PanelContainer" parent="SafeMargin/KeyboardOverlay" unique_id=448223283]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -455.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/KeyboardOverlay/TextKeyboard" unique_id=182514652]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Header" type="HBoxContainer" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content" unique_id=1383540329]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/Header" unique_id=1798655649]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "ВВОД ТЕКСТА"
+vertical_alignment = 1
+
+[node name="HideButton" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/Header" unique_id=1320880643]
+custom_minimum_size = Vector2(72, 52)
+layout_mode = 2
+focus_mode = 0
+text = "СКРЫТЬ"
+
+[node name="LetterRows" type="VBoxContainer" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content" unique_id=1274944330]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Row0" type="HBoxContainer" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows" unique_id=382754693]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Key_00" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row0" unique_id=2009858806]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_01" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row0" unique_id=87639330]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_02" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row0" unique_id=1489929141]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_03" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row0" unique_id=481476455]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_04" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row0" unique_id=480132961]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_05" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row0" unique_id=1637671075]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_06" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row0" unique_id=629007371]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_07" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row0" unique_id=598316023]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_08" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row0" unique_id=1106348937]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_09" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row0" unique_id=2033938809]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_10" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row0" unique_id=802383183]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_11" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row0" unique_id=1606927230]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Row1" type="HBoxContainer" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows" unique_id=1397656581]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Key_12" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row1" unique_id=1391086921]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_13" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row1" unique_id=150278976]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_14" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row1" unique_id=1720597781]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_15" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row1" unique_id=1167888403]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_16" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row1" unique_id=1194127507]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_17" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row1" unique_id=2083521699]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_18" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row1" unique_id=641436598]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_19" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row1" unique_id=1682573327]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_20" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row1" unique_id=493388943]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_21" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row1" unique_id=574079086]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_22" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row1" unique_id=604921703]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Row2" type="HBoxContainer" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows" unique_id=1013167052]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Key_23" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row2" unique_id=1037996585]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_24" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row2" unique_id=966394580]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_25" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row2" unique_id=1490122078]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_26" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row2" unique_id=245228282]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_27" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row2" unique_id=264073015]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_28" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row2" unique_id=520801348]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_29" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row2" unique_id=1299609265]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_30" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row2" unique_id=376103859]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_31" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row2" unique_id=174168447]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="Key_32" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/LetterRows/Row2" unique_id=482176718]
+custom_minimum_size = Vector2(44, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+
+[node name="PrimaryActions" type="HBoxContainer" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content" unique_id=2022889024]
+custom_minimum_size = Vector2(0, 62)
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="ShiftButton" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/PrimaryActions" unique_id=344363915]
+custom_minimum_size = Vector2(98, 62)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+text = "SHIFT"
+
+[node name="LanguageButton" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/PrimaryActions" unique_id=1633521123]
+custom_minimum_size = Vector2(98, 62)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "EN"
+
+[node name="SymbolsButton" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/PrimaryActions" unique_id=1401012280]
+custom_minimum_size = Vector2(98, 62)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "?123"
+
+[node name="BackspaceButton" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/PrimaryActions" unique_id=480777747]
+custom_minimum_size = Vector2(155, 62)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "СТЕРЕТЬ"
+
+[node name="SecondaryActions" type="HBoxContainer" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content" unique_id=1012248650]
+custom_minimum_size = Vector2(0, 62)
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="ClearButton" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/SecondaryActions" unique_id=859936456]
+custom_minimum_size = Vector2(118, 62)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "ОЧИСТИТЬ"
+
+[node name="CaretLeftButton" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/SecondaryActions" unique_id=1599192205]
+custom_minimum_size = Vector2(72, 62)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "←"
+
+[node name="SpaceButton" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/SecondaryActions" unique_id=1619936416]
+custom_minimum_size = Vector2(210, 62)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "ПРОБЕЛ"
+
+[node name="CaretRightButton" type="Button" parent="SafeMargin/KeyboardOverlay/TextKeyboard/Content/SecondaryActions" unique_id=1769063407]
+custom_minimum_size = Vector2(72, 62)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "→"
+
+[node name="NumericKeyboard" type="PanelContainer" parent="SafeMargin/KeyboardOverlay" unique_id=381993227]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.16
+anchor_top = 1.0
+anchor_right = 0.84
+anchor_bottom = 1.0
+offset_top = -455.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/KeyboardOverlay/NumericKeyboard" unique_id=1719940766]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Header" type="HBoxContainer" parent="SafeMargin/KeyboardOverlay/NumericKeyboard/Content" unique_id=722753726]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="SafeMargin/KeyboardOverlay/NumericKeyboard/Content/Header" unique_id=40416770]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "ВВОД ЧИСЛА"
+vertical_alignment = 1
+
+[node name="HideButton" type="Button" parent="SafeMargin/KeyboardOverlay/NumericKeyboard/Content/Header" unique_id=365857423]
+custom_minimum_size = Vector2(72, 52)
+layout_mode = 2
+focus_mode = 0
+text = "СКРЫТЬ"
+
+[node name="Grid" type="GridContainer" parent="SafeMargin/KeyboardOverlay/NumericKeyboard/Content" unique_id=338959899]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 7
+theme_override_constants/v_separation = 7
+columns = 3
+
+[node name="Digit1" type="Button" parent="SafeMargin/KeyboardOverlay/NumericKeyboard/Content/Grid" unique_id=1139124086]
+custom_minimum_size = Vector2(105, 82)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+text = "1"
+
+[node name="Digit2" type="Button" parent="SafeMargin/KeyboardOverlay/NumericKeyboard/Content/Grid" unique_id=1099815165]
+custom_minimum_size = Vector2(105, 82)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+text = "2"
+
+[node name="Digit3" type="Button" parent="SafeMargin/KeyboardOverlay/NumericKeyboard/Content/Grid" unique_id=521623286]
+custom_minimum_size = Vector2(105, 82)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+text = "3"
+
+[node name="Digit4" type="Button" parent="SafeMargin/KeyboardOverlay/NumericKeyboard/Content/Grid" unique_id=20701461]
+custom_minimum_size = Vector2(105, 82)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+text = "4"
+
+[node name="Digit5" type="Button" parent="SafeMargin/KeyboardOverlay/NumericKeyboard/Content/Grid" unique_id=247932641]
+custom_minimum_size = Vector2(105, 82)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+text = "5"
+
+[node name="Digit6" type="Button" parent="SafeMargin/KeyboardOverlay/NumericKeyboard/Content/Grid" unique_id=2002849411]
+custom_minimum_size = Vector2(105, 82)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+text = "6"
+
+[node name="Digit7" type="Button" parent="SafeMargin/KeyboardOverlay/NumericKeyboard/Content/Grid" unique_id=221204252]
+custom_minimum_size = Vector2(105, 82)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+text = "7"
+
+[node name="Digit8" type="Button" parent="SafeMargin/KeyboardOverlay/NumericKeyboard/Content/Grid" unique_id=171085334]
+custom_minimum_size = Vector2(105, 82)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+text = "8"
+
+[node name="Digit9" type="Button" parent="SafeMargin/KeyboardOverlay/NumericKeyboard/Content/Grid" unique_id=970380444]
+custom_minimum_size = Vector2(105, 82)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+text = "9"
+
+[node name="ClearButton" type="Button" parent="SafeMargin/KeyboardOverlay/NumericKeyboard/Content/Grid" unique_id=1871126598]
+custom_minimum_size = Vector2(105, 82)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+text = "C"
+
+[node name="Digit0" type="Button" parent="SafeMargin/KeyboardOverlay/NumericKeyboard/Content/Grid" unique_id=2137545427]
+custom_minimum_size = Vector2(105, 82)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+text = "0"
+
+[node name="BackspaceButton" type="Button" parent="SafeMargin/KeyboardOverlay/NumericKeyboard/Content/Grid" unique_id=1410968114]
+custom_minimum_size = Vector2(105, 82)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+text = "⌫"
+
+[node name="AutoSaveTimer" type="Timer" parent="." unique_id=1696493559]
+wait_time = 0.5
+one_shot = true
+
+[node name="TestTonePlayer" type="AudioStreamPlayer" parent="." unique_id=701067749]

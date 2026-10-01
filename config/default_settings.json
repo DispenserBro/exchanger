@@ -1,0 +1,130 @@
+{
+  "ConfigurationVersion": 25,
+  "Window": {
+    "Fullscreen": true,
+    "Borderless": true,
+    "DebugWindowInDebugBuild": true,
+    "DebugWindowWidth": 720,
+    "DebugWindowHeight": 1280,
+    "TargetFps": 60
+  },
+  "Themes": {
+    "ReducedEffects": false,
+    "ExternalDlcEnabled": true,
+    "ExternalDlcPath": "user://theme_dlc/active_theme.pck"
+  },
+  "Hardware": {
+    "UseMock": true,
+    "PortName": "COM3",
+    "BaudRate": 115200,
+    "FrameTimeoutMilliseconds": 100,
+    "MaximumFrameLength": 1024,
+    "HandshakeTimeoutMilliseconds": 2000,
+    "CashlessKeepAliveSeconds": 120,
+    "ReconnectIntervalSeconds": 30,
+    "ServiceButtonInputIndex": 8,
+    "ServiceButtonActiveHigh": false,
+    "StockSensorInputIndex": 1,
+    "StockLowWhenInputHigh": false,
+    "Hopper2StockSensorInputIndex": 4,
+    "Hopper2StockLowWhenInputHigh": false,
+    "Hopper1DispenseSensorInputIndex": 24,
+    "Hopper1DispenseSensorActiveHigh": false,
+    "Hopper2DispenseSensorInputIndex": 25,
+    "Hopper2DispenseSensorActiveHigh": false,
+    "InputPollMilliseconds": 100,
+    "StockPollSeconds": 5,
+    "ControllerAesMode": "ECB",
+    "ControllerAesKeyEnvironmentVariable": "EXCHANGER_CONTROLLER_AES_KEY",
+    "DispenseMode": "Unsupported",
+    "MockStockLevel": "Enough"
+  },
+  "Timeouts": {
+    "SessionIdleSeconds": 45,
+    "CashPaymentSeconds": 45,
+    "CashlessPaymentSeconds": 120,
+    "SuccessSeconds": 10
+  },
+  "Pricing": {
+    "TokenPriceRubles": 10,
+    "MaxCardAmountRubles": 5000,
+    "CustomAmountStepRubles": 10,
+    "PaymentPresets": [
+      {
+        "AmountRubles": 10
+      },
+      {
+        "AmountRubles": 50
+      },
+      {
+        "AmountRubles": 100
+      },
+      {
+        "AmountRubles": 150
+      },
+      {
+        "AmountRubles": 200
+      },
+      {
+        "AmountRubles": 300
+      },
+      {
+        "AmountRubles": 400
+      },
+      {
+        "AmountRubles": 500
+      }
+    ],
+    "BonusRules": []
+  },
+  "Payments": {
+    "CashEnabled": true,
+    "CardEnabled": true
+  },
+  "Branding": {
+    "ApplicationName": "РАЗМЕН ЖЕТОНОВ",
+    "ShortText": "ПОЛУЧИ СВОИ ЖЕТОНЫ!",
+    "SupportPhone": "Телефон поддержки уточняется"
+  },
+  "AnimatedBannerTexts": {
+    "CashPayment": "АВТОМАТ НЕ ВЫДАЁТ СДАЧУ",
+    "CardAmount": "ВЫБЕРИТЕ СУММУ ДЛЯ ПЕРЕХОДА К ТЕРМИНАЛУ",
+    "CardCustomAmount": "ВВЕДИТЕ СУММУ ДЛЯ ОПЛАТЫ",
+    "CardTerminalCountdownTemplate": "ОСТАЛОСЬ {seconds} СЕК."
+  },
+  "Audio": {
+    "MasterVolumePercent": 100,
+    "Muted": false,
+    "AdvertisementVolumePercent": 100,
+    "MusicVolumePercent": 100,
+    "SoundEffectsVolumePercent": 100
+  },
+  "Advertisement": {
+    "Enabled": true,
+    "VideoPaths": [],
+    "PosterPath": "",
+    "Muted": true,
+    "FallbackText": "ПРОМО-БЛОК"
+  },
+  "MenuVisibility": {
+    "ShowStockStatus": true,
+    "ShowRightCharacter": true,
+    "ShowPromotionBlock": true,
+    "ShowInteractivePet": true
+  },
+  "TokenInventory": {
+    "Enabled": true,
+    "PurchaseLimitEnabled": true
+  },
+  "Logging": {
+    "MinimumLevel": "Info",
+    "MaxFileSizeMb": 5,
+    "RetentionDays": 14
+  },
+  "Security": {
+    "ServicePinEnabled": false,
+    "ServicePinSaltBase64": "",
+    "ServicePinHashBase64": "",
+    "ServicePinIterations": 210000
+  }
+}

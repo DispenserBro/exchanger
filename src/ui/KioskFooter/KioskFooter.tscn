@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/ui/KioskFooter/KioskFooter.cs" id="1_script"]
+
+[node name="KioskFooter" type="Control"]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -82.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_type_variation = &"FooterPanel"
+
+[node name="Brand" type="Label" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 8.0
+offset_right = 296.0
+offset_bottom = 74.0
+theme_type_variation = &"SupportText"
+theme_override_font_sizes/font_size = 20
+text = "РАЗМЕН\nЖЕТОНОВ"
+vertical_alignment = 1
+
+[node name="Support" type="Label" parent="."]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 8.0
+offset_right = 692.0
+offset_bottom = 74.0
+theme_type_variation = &"SupportText"
+theme_override_font_sizes/font_size = 18
+text = "ТЕХПОДДЕРЖКА:\nТелефон поддержки уточняется"
+horizontal_alignment = 2
+vertical_alignment = 1

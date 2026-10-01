@@ -1,0 +1,211 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://src/scenes/HomeScreen/HomeScreen.cs" id="1_script"]
+[ext_resource type="PackedScene" path="res://src/ui/TokenStockStatus/TokenStockStatus.tscn" id="2_stock"]
+[ext_resource type="PackedScene" path="res://src/ui/AdvertisementPlayer/AdvertisementPlayer.tscn" id="3_advertisement"]
+[ext_resource type="PackedScene" path="res://src/ui/ConnectionStatusIndicator/ConnectionStatusIndicator.tscn" id="4_connection"]
+[ext_resource type="Script" path="res://src/ui/ThemeVisualSlot/ThemeVisualSlot.cs" id="5_visual"]
+
+[node name="HomeScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="SafeMargin" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Scroll" type="Control" parent="SafeMargin"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Content" type="Control" parent="SafeMargin/Scroll"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ThemeTop" type="Control" parent="SafeMargin/Scroll/Content"]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 200.0
+mouse_filter = 2
+script = ExtResource("5_visual")
+SlotId = "home.top"
+
+[node name="PricePanel" type="PanelContainer" parent="SafeMargin/Scroll/Content"]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 24.0
+offset_right = 398.0
+offset_bottom = 184.0
+theme_type_variation = &"WhitePanel"
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/PricePanel"]
+layout_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/PricePanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Caption" type="Label" parent="SafeMargin/Scroll/Content/PricePanel/Margin/Content"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_type_variation = &"PanelTitle"
+text = "ЦЕНА ЖЕТОНА"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Price" type="Label" parent="SafeMargin/Scroll/Content/PricePanel/Margin/Content"]
+layout_mode = 2
+theme_type_variation = &"PanelText"
+theme_override_font_sizes/font_size = 32
+text = "10 ₽"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpeechText" type="Label" parent="SafeMargin/Scroll/Content"]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 48.0
+offset_right = 548.0
+offset_bottom = 102.0
+theme_type_variation = &"PanelText"
+theme_override_font_sizes/font_size = 12
+text = "ПОЛУЧИ\nСВОИ ЖЕТОНЫ!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StockStatus" parent="SafeMargin/Scroll/Content" instance=ExtResource("2_stock")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 206.0
+offset_right = 690.0
+offset_bottom = 340.0
+
+[node name="PaymentPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 360.0
+offset_right = 690.0
+offset_bottom = 548.0
+theme_type_variation = &"WhitePanel"
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/PaymentPanel"]
+layout_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="SafeMargin/Scroll/Content/PaymentPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Title" type="Label" parent="SafeMargin/Scroll/Content/PaymentPanel/Margin/Content"]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_type_variation = &"PanelTitle"
+text = "ВЫБЕРИТЕ СПОСОБ ОПЛАТЫ"
+vertical_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="SafeMargin/Scroll/Content/PaymentPanel/Margin/Content"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="CashButton" type="Button" parent="SafeMargin/Scroll/Content/PaymentPanel/Margin/Content/Buttons"]
+custom_minimum_size = Vector2(280, 70)
+layout_mode = 2
+theme_type_variation = &"CompactButton"
+text = "НАЛИЧНЫЕ"
+
+[node name="CardButton" type="Button" parent="SafeMargin/Scroll/Content/PaymentPanel/Margin/Content/Buttons"]
+custom_minimum_size = Vector2(280, 70)
+layout_mode = 2
+theme_type_variation = &"CompactButton"
+text = "БЕЗНАЛИЧНЫЕ"
+
+[node name="AdvertisementPanel" type="PanelContainer" parent="SafeMargin/Scroll/Content"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 590.0
+offset_right = 658.0
+offset_bottom = 938.0
+mouse_filter = 2
+theme_type_variation = &"AdvertisementPanel"
+
+[node name="Layer" type="Control" parent="SafeMargin/Scroll/Content/AdvertisementPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ThemeFrame" type="Control" parent="SafeMargin/Scroll/Content/AdvertisementPanel/Layer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("5_visual")
+SlotId = "home.advertisement"
+
+[node name="Content" parent="SafeMargin/Scroll/Content/AdvertisementPanel/Layer" instance=ExtResource("3_advertisement")]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 100.0
+offset_right = 484.0
+offset_bottom = 260.0
+
+[node name="Footer" type="PanelContainer" parent="SafeMargin/Scroll/Content"]
+layout_mode = 0
+offset_top = 1198.0
+offset_right = 720.0
+offset_bottom = 1280.0
+theme_type_variation = &"FooterPanel"
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Scroll/Content/Footer"]
+layout_mode = 2
+
+[node name="Content" type="Control" parent="SafeMargin/Scroll/Content/Footer/Margin"]
+layout_mode = 2
+
+[node name="Brand" type="Label" parent="SafeMargin/Scroll/Content/Footer/Margin/Content"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 8.0
+offset_right = 296.0
+offset_bottom = 74.0
+theme_type_variation = &"SupportText"
+theme_override_font_sizes/font_size = 20
+text = "РАЗМЕН\nЖЕТОНОВ"
+vertical_alignment = 1
+
+[node name="Support" type="Label" parent="SafeMargin/Scroll/Content/Footer/Margin/Content"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 8.0
+offset_right = 692.0
+offset_bottom = 74.0
+theme_type_variation = &"SupportText"
+theme_override_font_sizes/font_size = 18
+text = "ТЕХПОДДЕРЖКА:\nТелефон поддержки уточняется"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ConnectionStatus" parent="SafeMargin/Scroll/Content/Footer/Margin/Content" instance=ExtResource("4_connection")]
+layout_mode = 0
+offset_left = 110.0
+offset_top = -68.0
+offset_right = 610.0
+offset_bottom = -8.0

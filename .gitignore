@@ -1,0 +1,38 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+**/bin/
+**/obj/
+
+# Local visual and video references
+references/
+
+# Local reports from physical controller acceptance tests
+artifacts/board-tests/
+
+# Local runtime soak reports
+artifacts/soak/
+
+# Reproducible Windows exports and sanitized staging project
+artifacts/windows/
+artifacts/export-staging/
+
+# Public snapshot: local-only data
+.env
+.env.*
+!.env.example
+.codex/
+.agents/
+.vscode/
+Library/
+Temp/
+Logs/
+UserSettings/
+Builds/
+.godot/
+.venv/
+__pycache__/
+node_modules/
+**/bin/
+**/obj/
+*.log

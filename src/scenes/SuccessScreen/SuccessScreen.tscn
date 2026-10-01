@@ -1,0 +1,114 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://src/scenes/SuccessScreen/SuccessScreen.cs" id="1_script"]
+[ext_resource type="Script" path="res://src/ui/ThemeVisualSlot/ThemeVisualSlot.cs" id="2_visual"]
+[ext_resource type="PackedScene" path="res://src/ui/KioskFooter/KioskFooter.tscn" id="3_footer"]
+
+[node name="SuccessScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="SafeMargin" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Content" type="Control" parent="SafeMargin"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HomeNavigationButton" type="Button" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 76.0
+offset_bottom = 68.0
+tooltip_text = "ГЛАВНАЯ"
+theme_type_variation = &"KeypadButton"
+
+[node name="House" type="Polygon2D" parent="SafeMargin/Content/HomeNavigationButton"]
+polygon = PackedVector2Array(8, 27, 26, 27, 17, 13)
+color = Color(0.005, 0.105, 0.486, 1)
+
+[node name="HouseBody" type="Polygon2D" parent="SafeMargin/Content/HomeNavigationButton"]
+polygon = PackedVector2Array(11, 26, 23, 26, 23, 40, 18, 40, 18, 32, 16, 32, 16, 40, 11, 40)
+color = Color(0.005, 0.105, 0.486, 1)
+
+[node name="ScreenTitle" type="Label" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 44.0
+offset_right = 680.0
+offset_bottom = 112.0
+theme_type_variation = &"ScreenTitle"
+text = "ОПЛАТА ПРОШЛА"
+horizontal_alignment = 1
+
+[node name="ResultPanel" type="PanelContainer" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 176.0
+offset_right = 624.0
+offset_bottom = 826.0
+theme_type_variation = &"WhitePanel"
+
+[node name="Margin" type="MarginContainer" parent="SafeMargin/Content/ResultPanel"]
+layout_mode = 2
+
+[node name="Values" type="VBoxContainer" parent="SafeMargin/Content/ResultPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Title" type="Label" parent="SafeMargin/Content/ResultPanel/Margin/Values"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_type_variation = &"PanelTitle"
+text = "ВЫДАЧА ЖЕТОНОВ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Body" type="Control" parent="SafeMargin/Content/ResultPanel/Margin/Values"]
+custom_minimum_size = Vector2(0, 538)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("2_visual")
+SlotId = "result.success"
+
+[node name="Message" type="Label" parent="SafeMargin/Content/ResultPanel/Margin/Values/Body"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 418.0
+offset_right = 456.0
+offset_bottom = 504.0
+theme_type_variation = &"PanelText"
+theme_override_font_sizes/font_size = 23
+text = "ЗАБЕРИТЕ ЖЕТОНЫ\nСПАСИБО ЗА ПОКУПКУ!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Countdown" type="Label" parent="SafeMargin/Content"]
+visible = false
+
+[node name="HomeButton" type="Button" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 862.0
+offset_right = 636.0
+offset_bottom = 956.0
+theme_type_variation = &"PrimaryButton"
+text = "НА ГЛАВНЫЙ ЭКРАН"
+
+[node name="Footer" parent="SafeMargin/Content" instance=ExtResource("3_footer")]
+layout_mode = 1

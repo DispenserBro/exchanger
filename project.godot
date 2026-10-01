@@ -1,0 +1,80 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Exchanger"
+config/name_localized={
+"ru_RU": "Размен жетонов"
+}
+config/description="Программа для аппарата размена жетонов"
+config/version="0.6.0"
+run/main_scene="res://src/scenes/App/App.tscn"
+run/enable_alt_space_menu=true
+config/features=PackedStringArray("4.7", "C#", "Mobile")
+boot_splash/image="uid://bkcx4v1p6ajo3"
+config/icon="uid://bexp3q7mygd6c"
+config/macos_native_icon="res://src/images/icon.icns"
+config/windows_native_icon="res://src/images/icon.ico"
+
+[autoload]
+
+ThemeManager="*res://src/core/ThemeManager/ThemeManager.cs"
+ScreenManager="*res://src/core/Navigation/ScreenManager.cs"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/size/mode=3
+window/size/borderless=true
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[dotnet]
+
+project/assembly_name="Exchanger"
+
+[editor_plugins]
+
+enabled=PackedStringArray( "res://addons/log/plugin.cfg")
+
+[input]
+
+kiosk_back={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194305,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+debug_service_settings={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194341,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[internationalization]
+
+locale/locale_filter_mode=0
+
+[log_gd]
+
+config/timestamp_type=4
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"

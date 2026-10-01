@@ -1,0 +1,161 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/scenes/ServiceAccessScreen/ServiceAccessScreen.cs" id="1_script"]
+[ext_resource type="PackedScene" path="res://src/ui/KioskFooter/KioskFooter.tscn" id="2_footer"]
+
+[node name="ServiceAccessScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="SafeMargin" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Content" type="Control" parent="SafeMargin"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HomeNavigationButton" type="Button" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 76.0
+offset_bottom = 68.0
+tooltip_text = "ГЛАВНАЯ"
+theme_type_variation = &"KeypadButton"
+
+[node name="House" type="Polygon2D" parent="SafeMargin/Content/HomeNavigationButton"]
+polygon = PackedVector2Array(8, 27, 26, 27, 17, 13)
+color = Color(0.005, 0.105, 0.486, 1)
+
+[node name="HouseBody" type="Polygon2D" parent="SafeMargin/Content/HomeNavigationButton"]
+polygon = PackedVector2Array(11, 26, 23, 26, 23, 40, 18, 40, 18, 32, 16, 32, 16, 40, 11, 40)
+color = Color(0.005, 0.105, 0.486, 1)
+
+[node name="Header" type="Label" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 18.0
+offset_right = 680.0
+offset_bottom = 72.0
+theme_type_variation = &"ScreenTitle"
+theme_override_font_sizes/font_size = 34
+text = "ВХОД В НАСТРОЙКИ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 78.0
+offset_right = 668.0
+offset_bottom = 140.0
+theme_type_variation = &"ScreenDescription"
+theme_override_font_sizes/font_size = 16
+text = "ВВЕДИТЕ PIN-КОД, ЧТОБЫ ОТКРЫТЬ НАСТРОЙКИ"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AccessPanel" type="PanelContainer" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 152.0
+offset_right = 660.0
+offset_bottom = 916.0
+theme_type_variation = &"WhitePanel"
+
+[node name="Fields" type="VBoxContainer" parent="SafeMargin/Content/AccessPanel"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="PinLabel" type="Label" parent="SafeMargin/Content/AccessPanel/Fields"]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_type_variation = &"PanelTitle"
+text = "PIN-КОД"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PinDisplay" type="Label" parent="SafeMargin/Content/AccessPanel/Fields"]
+custom_minimum_size = Vector2(0, 62)
+layout_mode = 2
+theme_type_variation = &"StatusText"
+theme_override_font_sizes/font_size = 34
+text = "—"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Status" type="Label" parent="SafeMargin/Content/AccessPanel/Fields"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_type_variation = &"PanelText"
+theme_override_font_sizes/font_size = 17
+text = "ВВЕДИТЕ PIN-КОД"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Keypad" type="GridContainer" parent="SafeMargin/Content/AccessPanel/Fields"]
+layout_mode = 2
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+columns = 3
+
+[node name="Digit1" type="Button" parent="SafeMargin/Content/AccessPanel/Fields/Keypad"]
+text = "1"
+[node name="Digit2" type="Button" parent="SafeMargin/Content/AccessPanel/Fields/Keypad"]
+text = "2"
+[node name="Digit3" type="Button" parent="SafeMargin/Content/AccessPanel/Fields/Keypad"]
+text = "3"
+[node name="Digit4" type="Button" parent="SafeMargin/Content/AccessPanel/Fields/Keypad"]
+text = "4"
+[node name="Digit5" type="Button" parent="SafeMargin/Content/AccessPanel/Fields/Keypad"]
+text = "5"
+[node name="Digit6" type="Button" parent="SafeMargin/Content/AccessPanel/Fields/Keypad"]
+text = "6"
+[node name="Digit7" type="Button" parent="SafeMargin/Content/AccessPanel/Fields/Keypad"]
+text = "7"
+[node name="Digit8" type="Button" parent="SafeMargin/Content/AccessPanel/Fields/Keypad"]
+text = "8"
+[node name="Digit9" type="Button" parent="SafeMargin/Content/AccessPanel/Fields/Keypad"]
+text = "9"
+[node name="Clear" type="Button" parent="SafeMargin/Content/AccessPanel/Fields/Keypad"]
+theme_override_font_sizes/font_size = 16
+text = "СБРОС"
+[node name="Digit0" type="Button" parent="SafeMargin/Content/AccessPanel/Fields/Keypad"]
+text = "0"
+[node name="Erase" type="Button" parent="SafeMargin/Content/AccessPanel/Fields/Keypad"]
+text = "⌫"
+
+[node name="EnterButton" type="Button" parent="SafeMargin/Content/AccessPanel/Fields"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+theme_type_variation = &"PrimaryButton"
+theme_override_font_sizes/font_size = 32
+text = "ВОЙТИ"
+
+[node name="CancelButton" type="Button" parent="SafeMargin/Content"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 940.0
+offset_right = 610.0
+offset_bottom = 1026.0
+theme_type_variation = &"SecondaryButton"
+text = "ОТМЕНА"
+
+[node name="Footer" parent="SafeMargin/Content" instance=ExtResource("2_footer")]
+layout_mode = 1
