@@ -26,8 +26,10 @@ config/windows_native_icon="res://src/images/icon.ico"
 
 [autoload]
 
+GodotxToast="*uid://bgvixrj72u7rv"
 ThemeManager="*res://src/core/ThemeManager/ThemeManager.cs"
 ScreenManager="*res://src/core/Navigation/ScreenManager.cs"
+_mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"
 
 [display]
 
@@ -44,7 +46,7 @@ project/assembly_name="Exchanger"
 
 [editor_plugins]
 
-enabled=PackedStringArray( "res://addons/log/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot_ai/plugin.cfg", "res://addons/godotx_toast/plugin.cfg", "res://addons/log/plugin.cfg", "res://addons/reload_current_scene/plugin.cfg")
 
 [input]
 
